@@ -4,6 +4,8 @@ Student Information
 Student Name: Mokete Mantjane
 Student Number: ST10495452
 GitHub Repository: https://github.com/Gadaffi-24/Nike-web.git
+Approved Document: Edition 1_ST10495452_HMAW
+Chosen Proposal Doc: Edition 1_ST10495452_HMAW
 
 Project Overview:
 This project is about creating a professional website. It will show my skills in web design and development. The project has three parts-first building the basic HTML structure then adding CSS styling and finally adding JavaScript functionality. By the end the website will work on all devices and be easy for search engines to find.
