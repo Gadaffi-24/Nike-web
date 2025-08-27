@@ -6,6 +6,7 @@ Student Number: ST10495452
 GitHub Repository: https://github.com/Gadaffi-24/Nike-web.git
 Approved Document: Edition 1_ST10495452_HMAW
 Chosen Proposal Doc: Edition 1_ST10495452_HMAW
+Research Document: section 3 of part 1
 
 Project Overview:
 This project is about creating a professional website. It will show my skills in web design and development. The project has three parts-first building the basic HTML structure then adding CSS styling and finally adding JavaScript functionality. By the end the website will work on all devices and be easy for search engines to find.
@@ -75,4 +76,4 @@ Changelog:
 [25 August 2025]: Added a fake payment form to the payment page.
 
 References:
-All references for this part of the project are included in the Website Project Proposal document and this README.md file. They are cited using the correct referencing style.
+All references for this part of the project are included in the Website Project Proposal document, research doc and this README.md file. They are cited using the correct referencing style.
