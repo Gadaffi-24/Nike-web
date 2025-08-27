@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Sets the character set for the document -->
+    <meta charset="UTF-8">
+    <!-- Makes the website look good on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Sets the title that appears in the browser tab -->
+    <title>Payment - My Website</title>
+    <!-- Links to your CSS file for styling -->
+    <link rel="stylesheet" href="css\style.css">
+</head>
+<body>
+
+    <!-- The header section at the top of the page -->
+    <header>
+        <!-- The navigation menu -->
+        <nav>
+            <ul>
+                <!-- Navigation links to other pages, including the new payment page -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="inspiration section.html">Inspiration</a></li>
+                <li><a href="membership portal.html">Membership</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="payment.html">Payment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- The main content area of the page -->
+    <main>
+        <h1>Secure Payment</h1>
+        <!-- This is a fake payment form with various input fields -->
+        <form>
+            <p>Please enter your payment details below.</p>
+            <div class="total-display">
+                <h3>Total to be Paid:</h3>
+                <h3 class="total-amount">$447.98</h3>
+            </div>
+            <!-- Card Number Field -->
+            <label for="card-number">Card Number:</label>
+            <input 
+                type="text" 
+                id="card-number" 
+                name="card-number" 
+                placeholder="xxxx xxxx xxxx xxxx"
+                pattern="\d{4} \d{4} \d{4} \d{4}" 
+                title="Enter a 16-digit card number"
+                required>
+
+            <!-- Cardholder Name Field -->
+            <label for="card-name">Cardholder Name:</label>
+            <input 
+                type="text" 
+                id="card-name" 
+                name="card-name" 
+                placeholder="Name on Card"
+                required>
+
+            <!-- Expiration Date Fields -->
+            <label for="expiry-month">Expiration Date:</label>
+            <div class="expiry-date-container">
+                <input 
+                    type="text" 
+                    id="expiry-month" 
+                    name="expiry-month" 
+                    placeholder="MM"
+                    pattern="\d{2}"
+                    maxlength="2"
+                    title="Enter a two-digit month"
+                    required>
+                <span>/</span>
+                <input 
+                    type="text" 
+                    id="expiry-year" 
+                    name="expiry-year" 
+                    placeholder="YY"
+                    pattern="\d{2}"
+                    maxlength="2"
+                    title="Enter a two-digit year"
+                    required>
+            </div>
+
+            <!-- CVV Field -->
+            <label for="cvv">CVV:</label>
+            <input 
+                type="text" 
+                id="cvv" 
+                name="cvv" 
+                placeholder="xxx"
+                pattern="\d{3,4}"
+                maxlength="4"
+                title="Enter a 3 or 4 digit CVV"
+                required>
+
+            <!-- The "Pay Now" button to submit the form -->
+            <button type="submit">Pay Now</button>
+        </form>
+    </main>
+
+    <!-- The footer section at the bottom of the page -->
+    <footer>
+        <!-- Simple copyright notice -->
+        <p>&copy; 2025 My Website. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Links to your JavaScript file for functionality -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
