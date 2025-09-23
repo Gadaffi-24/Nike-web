@@ -59,3 +59,77 @@ footer {
     color: #fff;
     margin-top: 2em;
 }
+
+/* Layout Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* To centre the container on the page */
+    padding: 0 1em;
+}
+
+/* Header and Navigation Layout */
+header {
+    display: flex; /* Enables FlexBox for the Header */
+    justify-content: center; /* Centres the Navigation menu horizontally */
+    align-items: center; /* Vertically aligns items */
+    padding: 1em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2em; /* Increses space between nav links */
+}
+
+/* Main Content and Section Layout */
+main {
+    display: flex;
+    flex-direction: column; /* Stacks/Places sections vertically */
+    gap: 2em; /* Adds spaces between sections */
+    padding: 2em 0;
+}
+
+section {
+    padding: 1em;
+    background-color: #fff;
+    border: #ddd;
+    border-radius: 8px; /* Adds a nice curve to the corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a neat shadow */
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 1em; /* Adds space between gallery images */
+    flex-wrap: wrap; /* Allows images to wrap to the next line on smaller screens */
+}
+
+.image-gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Typography Styles */
+h1 {
+    font-size: 2.5em; /* Larger size for the main heading */
+    text-align: center; /* Centres the heading */
+    color: #000;
+}
+
+h2 {
+    font-size: 1.8em;
+    border-bottom: 2px solid #eee; /* Adds an underline to headings */
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+}
+
+p {
+    font-size: 1em;
+    color: #444;
+}
+
+footer p {
+    font-size: 0.9em;
+    color: #ccc;
+}

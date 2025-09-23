@@ -89,12 +89,16 @@ Changelog:
 [25 August 2025]: Added a fake payment form to the payment page.
 
 
-# Nike Website - Part 2: CSS Styling and Responsive Design
+# Part 2: CSS Styling and Responsive Design
 
 Changelog:
-[22 September 2025]: Initial Setup:
+[22 September 2025]: (Initial Setup)
     * Created and linked an external stylesheet (`css/style.css`) to all HTML pages.
-    * Implemented a CSS reset and foundational base styles (e.g., font family, color scheme) to ensure a consistent look and feel across the website.
+    * Implemented a CSS reset and foundational base styles (e.g. font family, color scheme) to ensure a consistent look and feel across the website.
+[23 September 2025]: (CSS Layout and Typography)
+    * Implemented a Flexbox-based layout for the navigation and main content.
+    * Added visual styling with shadows and borders to sections.
+    * Defined specific typography styles, including font sizes and spacing for headings and paragraphs.
 
-References:
+# References:
 All references for this part of the project are included in the Website Project Proposal document, research doc and this README.md file. They are cited using the correct referencing style.
