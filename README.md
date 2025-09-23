@@ -91,8 +91,6 @@ Changelog:
 
 # Nike Website - Part 2: CSS Styling and Responsive Design
 
-This repository contains the updated website for Part 2 of the assignment, focusing on CSS styling and responsive design.
-
 Changelog:
 [22 September 2025]: Initial Setup:
     * Created and linked an external stylesheet (`css/style.css`) to all HTML pages.
