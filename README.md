@@ -1,6 +1,6 @@
 My Website Project:
 
-Student Information
+# Student Information
 Student Name: Mokete Mantjane
 Student Number: ST10495452
 GitHub Repository: https://github.com/Gadaffi-24/Nike-web.git
@@ -8,16 +8,16 @@ Approved Document: Edition 1_ST10495452_HMAW
 Chosen Proposal Doc: Edition 1_ST10495452_HMAW
 Research Document: section 3 of part 1
 
-Project Overview:
+# Project Overview:
 This project is about creating a professional website. It will show my skills in web design and development. The project has three parts-first building the basic HTML structure then adding CSS styling and finally adding JavaScript functionality. By the end the website will work on all devices and be easy for search engines to find.
 
-Website Goals and Objectives:
+# Website Goals and Objectives:
 
 Goal: To build a professional, working website.
 Purpose: To show my skills in web development.
 Features: The website will be responsive (works on all devices), easy to use, and SEO-friendly.
 
-Key Features and Functionality:
+# Key Features and Functionality:
 
 Responsive Design: The website will look good on computers, tablets, and phones.
 Easy Navigation: Users can easily move between pages.
@@ -25,8 +25,9 @@ Organized Content: Content is sorted into different pages like About Us, Product
 Interactive Parts: The final website will have JavaScript to make it more interactive.
 Search Engine Friendly: The website will be built so that search engines can easily find and understand it.
 
-Project Timeline and Milestones:
+# Project Timeline and Milestones:
 
+Part 1:
 Start Date: 11 August 2025
 Submission Date: 27 August 2025
 
@@ -39,7 +40,19 @@ Basic Content & Navigation - 20 August 2025
 Testing & Debugging - 24 August 2025
 Final Review & Submission - 27 August 2025
 
-Part 1 Details:
+Part 2:
+Start Date: 22 September 2025
+Submission Date: 26 September 2025
+
+Milestone & Due Date:
+
+Project Planning - 22 September 2025
+CSS Styling for Desktop - 23 September 2025
+Layout & Responsive Images - 24 September 2025
+Responsive Design - 25 September 2025
+Testing & Final Submission - 26 September 2025
+
+# Part 1 Details:
 This part focuses on building the basic HTML structure.
 
 File and Folder Structure:
@@ -74,6 +87,16 @@ Changelog:
 [25 August 2025]: Added a new page for the shopping cart and updated the navigation links.
 [25 August 2025]: Created a new payment page and linked the checkout button to it.
 [25 August 2025]: Added a fake payment form to the payment page.
+
+
+# Nike Website - Part 2: CSS Styling and Responsive Design
+
+This repository contains the updated website for Part 2 of the assignment, focusing on CSS styling and responsive design.
+
+Changelog:
+[22 September 2025]: Initial Setup:
+    * Created and linked an external stylesheet (`css/style.css`) to all HTML pages.
+    * Implemented a CSS reset and foundational base styles (e.g., font family, color scheme) to ensure a consistent look and feel across the website.
 
 References:
 All references for this part of the project are included in the Website Project Proposal document, research doc and this README.md file. They are cited using the correct referencing style.
