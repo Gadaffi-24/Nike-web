@@ -1,0 +1,61 @@
+/* CSS Reset to normalize styles across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Styles for the entire website */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* A clear, modern font stack */
+    line-height: 1.6;
+    background-color: #f4f4f4; /* A light grey background for a clean look */
+    color: #333; /* Dark grey for text for good readability */
+}
+
+/* Basic styling for headings */
+h1, h2, h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1a1a1a; /* A darker grey for headings */
+    margin-bottom: 0.5em;
+}
+
+/* Styling for links to make them more visually appealing */
+a {
+    color: #007bff; /* A blue color for links */
+    text-decoration: none; /* Remove the default underline */
+}
+
+/* Navigation menu styling for a consistent header */
+header {
+    background-color: #fff;
+    padding: 1em;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex; /* Use Flexbox to align list items horizontally */
+    justify-content: center; /* Center the navigation links */
+    gap: 1em; /* Add space between links */
+}
+
+nav a {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Main content and footer styling for structure */
+main {
+    padding: 2em;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #333;
+    color: #fff;
+    margin-top: 2em;
+}
