@@ -133,3 +133,59 @@ footer p {
     font-size: 0.9em;
     color: #ccc;
 }
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    
+    /* Responsive layout adjustments */
+    .container {
+        padding: 0 0.5em;
+    }
+
+    main {
+        padding: 1em 0;
+    }
+
+    section {
+        padding: 0.5em;
+    }
+
+    /* Responsive navigation menu adjustments */
+    header {
+        padding: 0.5em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+    }
+
+    /* Responsive typography adjustments */
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .image-gallery {
+        flex-direction: column;
+    }
+
+    .image-gallery img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/*CSS Pseudo- Classes for Interactive Elements */
+nav a:hover {
+    color: #007bff; /* Changes the link color to blue whilst on hover */
+    text-decoration: underline; /* Adds underlines on hover */
+}

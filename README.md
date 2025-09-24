@@ -99,6 +99,10 @@ Changelog:
     * Implemented a Flexbox-based layout for the navigation and main content.
     * Added visual styling with shadows and borders to sections.
     * Defined specific typography styles, including font sizes and spacing for headings and paragraphs.
+[24 September 2025]:(Enhanced Responsive Design)
+    * Implemented detailed media queries to adjust layout, navigation and typography for mobile devices.
+    * Added `srcset` and `sizes` attributes for responsive image loading.
+    * Used pseudo-classes to add interactive hover effects to navigation links.
 
 # References:
 All references for this part of the project are included in the Website Project Proposal document, research doc and this README.md file. They are cited using the correct referencing style.
