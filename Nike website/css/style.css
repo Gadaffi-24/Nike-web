@@ -344,3 +344,216 @@ main p {
     object-fit: cover; /* This ensures images cover the height without stretching, cropping as needed */
     display: block;
 }
+
+
+/* --- Cart Page Layout (Split Grid) --- */
+
+/* Main heading adjustments for cart */
+main h1 {
+    font-size: 2.8em;
+    font-weight: 800;
+    text-align: left; /* Aligns left, like a modern checkout */
+    margin-top: 1em;
+    margin-bottom: 0.2em;
+}
+
+/* Container for the main cart area */
+.cart-container {
+    display: grid;
+    /* Two columns: 65% for items, 30% for summary, with a gap */
+    grid-template-columns: 2fr 1fr; 
+    gap: 40px;
+    padding: 2em 0;
+}
+
+/* --- Cart Items Section (Left Column) --- */
+
+.cart-items {
+    border-right: 1px solid #eee; /* Subtle vertical separator */
+    padding-right: 40px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center; /* Vertically align image and text */
+    padding: 1.5em 0;
+    border-bottom: 1px solid #eee;
+    position: relative; /* Needed to position the remove button */
+}
+
+.cart-item:last-child {
+    border-bottom: none; /* Remove border from the last item */
+}
+
+.cart-item img {
+    width: 120px; /* Fixed size for item image */
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 20px;
+}
+
+.item-details {
+    flex-grow: 1; /* Allows details to take up remaining space */
+}
+
+.item-details h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+}
+
+.item-price {
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 0.5em;
+}
+
+.item-options span {
+    font-size: 0.9em;
+    color: #666;
+    display: block; /* Each option on its own line */
+}
+
+/* Quantity Selector Styling */
+.item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.quantity-btn {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #000;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Circular buttons */
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.quantity-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.quantity-value {
+    font-weight: 600;
+    padding: 0 5px;
+}
+
+/* Remove Button Styling */
+.remove-btn {
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    font-size: 0.9em;
+    text-decoration: underline;
+    transition: color 0.2s;
+    margin-left: auto; /* Pushes the button to the far right */
+    position: absolute;
+    right: 0;
+    top: 1.5em;
+}
+
+.remove-btn:hover {
+    color: #d9534f; /* Subtle red hover for removal */
+}
+
+
+/* --- Cart Summary Section (Right Column) --- */
+
+.cart-summary {
+    background-color: #f7f7f7; /* Slightly darker background to stand out */
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    height: fit-content; /* Keeps the box tight to its content */
+}
+
+.cart-summary h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5em;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8em;
+    font-size: 1em;
+}
+
+.summary-line p {
+    margin: 0;
+    text-align: left; /* Overrides general main p styling */
+    color: #333;
+}
+
+.total-line {
+    border-top: 2px solid #000; /* Bold separator for total */
+    padding-top: 1em;
+    margin-top: 1em;
+}
+
+.total-line h3 {
+    font-size: 1.4em;
+    font-weight: 800;
+}
+
+/* Checkout Button */
+.checkout-btn {
+    display: block;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 1em;
+    margin-top: 1.5em;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: #01e6ff;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .cart-container {
+        /* Stack the columns vertically on smaller screens */
+        grid-template-columns: 1fr; 
+        gap: 30px;
+    }
+
+    .cart-items {
+        border-right: none; /* Remove vertical line when stacked */
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .cart-item {
+        flex-direction: column; /* Stack image and details on mobile */
+        align-items: flex-start;
+        padding-bottom: 2em;
+    }
+
+    .cart-item img {
+        margin-right: 0;
+        margin-bottom: 1em;
+    }
+
+    .remove-btn {
+        position: static; /* Move button below the item details */
+        margin-top: 10px;
+        font-size: 1em;
+    }
+}
