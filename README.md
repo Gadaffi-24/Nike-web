@@ -103,6 +103,16 @@ Changelog:
     * Implemented detailed media queries to adjust layout, navigation and typography for mobile devices.
     * Added `srcset` and `sizes` attributes for responsive image loading.
     * Used pseudo-classes to add interactive hover effects to navigation links.
+[25 September 2025]: (Features and Styles)
+    * Changed Images in the product page and cart page.
+    * Added custom 'titles' to the forms.
+    * Sign-up Page: A brand new professionally styled sign-up page (signup.html) has been created to allow new users to register.
+    * Form Fields: The sign-up form now includes fields for full name, email address and password as well as a dedicated section for an optional profile picture upload.
+    * Linked the membership page to the sign-up page.
+    * The final CSS for the payment page (payment.html) was created and added to the website to make it stand out whilst keeping its neatness.
+    * Phone Number Field: A phone number input field has been added to the sign-up form complete with a placeholder and input pattern to guide users on the correct format.
+    * Dedicated CSS: New CSS rules were added to css/style.css specifically to style the new sign-up page ensuring it has a clean modern look without affecting other pages along with a newly structured css code to allow other pages to be changes individually.
+    * Custom Button Hover: The hover effect on the sign-up form's custom file upload and submit buttons has been updated to a vibrant cyan (#01e6ff).
 
 # References:
 All references for this part of the project are included in the Website Project Proposal document, research doc and this README.md file. They are cited using the correct referencing style.
