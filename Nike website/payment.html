@@ -31,7 +31,7 @@
     </header>
 
     <!-- The main content area of the page -->
-    <main>
+    <main class="payment-container">
         <h1>Secure Payment</h1>
         <!-- This is a fake payment form with various input fields -->
         <form>
@@ -47,7 +47,8 @@
                 id="card-number" 
                 name="card-number" 
                 placeholder="xxxx xxxx xxxx xxxx"
-                pattern="\d{4} \d{4} \d{4} \d{4}" 
+                pattern="\d{4} \d{4} \d{4} \d{4}"
+                maxlength="16"
                 title="Enter a 16-digit card number"
                 required>
 
@@ -92,7 +93,7 @@
                 name="cvv" 
                 placeholder="xxx"
                 pattern="\d{3,4}"
-                maxlength="4"
+                maxlength="3"
                 title="Enter a 3 or 4 digit CVV"
                 required>
 

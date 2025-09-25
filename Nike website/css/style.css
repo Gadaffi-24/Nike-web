@@ -557,3 +557,122 @@ main h1 {
         font-size: 1em;
     }
 }
+
+
+/* --- Payment Page Styling --- */
+
+/* Main content container for the payment page */
+main.payment-container {
+    padding: 40px 20px;
+    max-width: 600px;
+    margin: 0 auto; /* Center the form on the page */
+}
+
+/* Style the main heading for the payment page */
+main h1 {
+    font-size: 2.5em;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style the form container to be a prominent card */
+form {
+    background-color: #f7f7f7;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+}
+
+/* Style the paragraph within the form */
+form p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Style the total amount display section */
+.total-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.total-display h3 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.total-amount {
+    font-size: 1.8em;
+    font-weight: 900;
+    color: #000;
+}
+
+/* Style all form labels */
+label {
+    display: block;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Style all text input fields */
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box; /* Ensures padding doesn't affect total width */
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 1em;
+}
+
+/* Add a focus and hover effect for inputs */
+input[type="text"]:focus {
+    border-color: #000;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+    outline: none; /* Removes the default outline */
+}
+
+/* Style the container for the expiry date to be on one line */
+.expiry-date-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between the month and year inputs */
+}
+
+.expiry-date-container input {
+    width: 50%;
+}
+
+/* Style the separator between month and year */
+.expiry-date-container span {
+    font-size: 1.5em;
+    color: #666;
+}
+
+/* Style the Pay Now button */
+button[type="submit"] {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button[type="submit"]:hover {
+    background-color: #01e6ff;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
