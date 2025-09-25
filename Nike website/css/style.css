@@ -189,3 +189,158 @@ nav a:hover {
     color: #007bff; /* Changes the link color to blue whilst on hover */
     text-decoration: underline; /* Adds underlines on hover */
 }
+
+/* --- Product Page Specific Styling (Nike Aesthetic) --- */
+
+/* Main Headings */
+main h1 {
+    font-size: 3.5em; /* Large, bold heading */
+    font-weight: 900;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 0.2em;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+}
+
+main p {
+    text-align: center;
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 2em;
+}
+
+/* Category Sections */
+.product-category-section {
+    padding-top: 2em;
+    border-top: 1px solid #eee; /* Subtle separator */
+}
+
+.product-category-section h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 1em;
+    color: #111;
+    border-bottom: none; /* Override Day 2 border */
+}
+
+/* Product Grid Layout (CSS Grid) */
+.product-gallery {
+    display: grid;
+    /* Responsive grid with a minimum card width of 320px */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 30px; /* Space between cards */
+    padding-bottom: 3em;
+}
+
+/* Individual Product Card Styling */
+.product-card {
+    background-color: #f7f7f7; /* Light grey background for a clean look */
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Subtle lift effect on hover */
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-details {
+    padding: 1.5em;
+    text-align: left;
+}
+
+.product-details h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.product-price {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 0.5em;
+}
+
+/* Option Selector Styling (Sizes/Colors) */
+.option-selector {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.option-selector h4 {
+    font-size: 0.9em;
+    font-weight: normal;
+    color: #777;
+    margin-bottom: 0.5em;
+}
+
+.options {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.option-item {
+    padding: 0.4em 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 50px; /* Pill shape for sizes/colors */
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.option-item:hover {
+    border-color: #000;
+}
+
+/* Add to Cart Button Styling */
+.add-to-cart {
+    display: block; /* Makes the button fill the width */
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 1em;
+    margin-top: 1.5em;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #01e6ff;
+}
+
+/* --- Responsive Adjustments for Product Page --- */
+@media (max-width: 768px) {
+    .product-category-section h2 {
+        text-align: center;
+    }
+    .product-details {
+        text-align: center; /* Center details on mobile */
+    }
+    .options {
+        justify-content: center; /* Center options on mobile */
+    }
+}
+
+/* Ensure all product images have a neat and consistent size */
+.product-card img {
+    height: 300px; /* Set a consistent height for all main product images */
+    width: 100%; 
+    object-fit: cover; /* This ensures images cover the height without stretching, cropping as needed */
+    display: block;
+}
