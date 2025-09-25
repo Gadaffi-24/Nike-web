@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - My Website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <!-- The navigation menu -->
+        <nav>
+            <ul>
+                <!-- Navigation links to all pages -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="inspiration section.html">Inspiration</a></li>
+                <li><a href="membership portal.html">Membership</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="payment.html">Payment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- The main content area of the page -->
+    <main class="signup-container">
+        <h1>Create an Account</h1>
+        <!-- The sign-up form with a professional and clean design -->
+        <form action="#" method="post">
+            <p>Join our community to unlock exclusive features and offers.</p>
+
+            <!-- Profile Picture Section -->
+            <div class="profile-pic-upload">
+                <label for="profile-picture">Profile Picture (Optional):</label>
+                <input type="file" id="profile-picture" name="profile-picture" accept="image/*" class="file-input">
+                <label for="profile-picture" class="file-label">Choose a File</label>
+            </div>
+
+            <!-- Full Name Field -->
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" placeholder="Nike member" title="Enter your full name" required>
+
+            <!-- Email Field -->
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" title="Enter email address" required>
+
+            <!-- Phone Number Field -->
+            <label for="phone-number">Phone Number:</label>
+            <input type="tel" id="phone-number" name="phone-number" placeholder="*** *** ****" pattern="\d{3} \d{3} \d{4}" title="Please enter a ten digit phone number" maxlength="10" required>
+
+            <!-- Password Field -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="••••••••" title="Enter Password" required maxlength="8">
+
+            <!-- The "Sign Up" button to submit the form -->
+            <button type="submit">Sign Up</button>
+        </form>
+    </main>
+
+    <!-- The footer section at the bottom of the page -->
+    <footer>
+        <!-- Simple copyright notice -->
+        <p>&copy; 2025 My Website. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Links to your JavaScript file for functionality -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

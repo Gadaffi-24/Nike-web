@@ -676,3 +676,120 @@ button[type="submit"]:hover {
     background-color: #01e6ff;
     transform: translateY(-2px); /* Slight lift on hover */
 }
+
+
+/* --- Sign Up Page Styling --- */
+
+/* Main content container for the sign-up page */
+main.signup-container {
+    padding: 40px 20px;
+    max-width: 500px;
+    margin: 0 auto; /* Center the form on the page */
+}
+
+/* Style the form container to be a prominent card */
+main.signup-container form {
+    background-color: #f7f7f7;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+}
+
+/* Style the main heading for the sign-up page */
+main.signup-container h1 {
+    font-size: 2.2em;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style the paragraph within the form */
+main.signup-container form p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Style the profile picture upload section */
+.profile-pic-upload {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profile-pic-upload label[for="profile-picture"] {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Hide the default, ugly file input button */
+.file-input {
+    display: none;
+}
+
+/* Style the custom button for file upload */
+.file-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.file-label:hover {
+    background-color: #01e6ff;
+}
+
+/* Style all form labels */
+main.signup-container label {
+    display: block;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Style all text input fields */
+main.signup-container input[type="text"],
+main.signup-container input[type="email"],
+main.signup-container input[type="password"],
+main.signup-container input[type="tel"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box; /* Ensures padding doesn't affect total width */
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 1em;
+}
+
+/* Add a focus effect for inputs */
+main.signup-container input:focus {
+    border-color: #000;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+    outline: none; /* Removes the default outline */
+}
+
+/* Style the Sign Up button */
+main.signup-container button[type="submit"] {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+main.signup-container button[type="submit"]:hover {
+    background-color: #01e6ff;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
