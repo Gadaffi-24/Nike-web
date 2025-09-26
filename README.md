@@ -91,6 +91,21 @@ Changelog:
 
 # Part 2: CSS Styling and Responsive Design
 
+Testing and Comments:
+The website is being tested on different browsers.
+Comments are included in the code to explain what it does.
+
+Sitemap:
+Home (index.html)
+About Us (about.html)
+Products (product.html)
+Inspiration Section (inspiration section.html)
+Membership Portal (membership portal.html)
+Contact (contact.html)
+Cart (cart.html)
+Payment (payment.html)
+Sign-up (sign-up.html)
+
 Changelog:
 [22 September 2025]: (Initial Setup)
     * Created and linked an external stylesheet (`css/style.css`) to all HTML pages.
