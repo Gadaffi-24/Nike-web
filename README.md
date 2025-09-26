@@ -144,7 +144,15 @@ Changelog:
 
 
 # Test and Iterate:
+MS Edge:
+Phone: ![Alt text](<Nike website/Images/Mobile.png>)
+Tablet: ![Alt text](<Nike website/Images/Ipad Pro (tablet).png>)
+PC: ![Alt text](<Nike website/Images/Desktop version.png>)
 
+Chrome:
+Phone: ![Alt text](<Nike website/Images/iPHONE chrome.png>)
+Tablet: ![Alt text](<Nike website/Images/Ipad Pro (tablet) chrome.png>)
+PC: ![Alt text](<Nike website/Images/PC chrome.png>)
 
 # References:
 All references for this part of the project are included in the Website Project Proposal document, research doc and this README.md file. They are cited using the correct referencing style.
