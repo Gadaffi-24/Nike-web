@@ -9,6 +9,104 @@
     <title>Contact - My Website</title>
     <!-- Links to your CSS file for styling -->
     <link rel="stylesheet" href="css\style.css">
+
+    <style>
+        /* General form container styling */
+        .contact-form form {
+            /* Adds visual separation and background to the form box */
+            border: 1px solid #ddd;
+            padding: 25px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            /* Ensures font is readable */
+            font-family: Arial, sans-serif;
+            margin-top: 20px;
+        }
+
+        /* Style for all labels to ensure they are on their own line */
+        .contact-form label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333; /* Darker text for readability */
+        }
+        
+        /* Style for all text inputs, email, tel, number, select, and textarea */
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form input[type="tel"],
+        .contact-form input[type="number"],
+        .contact-form select,
+        .contact-form textarea {
+            /* Apply consistent visual style */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            /* box-sizing: border-box is crucial for not affecting width when adding padding */
+            box-sizing: border-box;
+            width: 100%; 
+        }
+
+        /* Focus state for better accessibility and user experience */
+        .contact-form input:focus,
+        .contact-form select:focus,
+        .contact-form textarea:focus {
+            border-color: #5cb37b;
+            outline: none; /* Remove default browser focus outline */
+            box-shadow: 0 0 5px rgba(92, 179, 123, 0.5);
+        }
+
+        /* Style for the radio button group label (Gender) to separate it */
+        .contact-form label:has(input[type="radio"]) {
+            display: inline-block; /* Keep radio labels next to the input */
+            font-weight: normal;
+            margin-right: 15px;
+        }
+        
+        /* Style for the main 'Gender' label to separate it from options */
+        .contact-form form > label:not([for]) {
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* Style for the submit button */
+        .contact-form input[type="submit"] {
+            background-color: #000;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            margin-right: 10px;
+            width: auto;
+        }
+
+        /* Style for the reset button */
+        .contact-form input[type="reset"] {
+            background-color: #f44336;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            width: auto;
+        }
+        
+        /* Hover effect for buttons */
+        .contact-form input[type="submit"]:hover {
+            background-color: #01e6ff;
+        }
+        .contact-form input[type="reset"]:hover {
+            background-color: #da190b;
+        }
+    </style>
 </head>
 <body>
 
@@ -75,37 +173,43 @@
                 <p>Please use this form for a quick message, and we'll get back to you as soon as possible.</p>
             </form>
             <form action="submit" method="post">
-                <label for="name">Full Name:</label><br>
-                <input type="text" name="name" id="name" placeholder="Enter your name" required><br><br>
+                <label for="name">Full Name:</label>
+                <input type="text" name="name" id="name" placeholder="Enter your name" title="Enter your full name" required>
         
-                <label for="email">Email:</label><br>
-                <input type="email" name="email" id="email" placeholder="Enter your email" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" title="Enter email address" required>
         
-                <label for="phone number">Phone Number:</label><br>
-                <input type="tel" id="phone number" name="phone number" maxlength="10" placeholder="Enter your phone number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
+                <label for="phone number">Phone Number:</label>
+                <input type="tel" id="phone number" name="phone number" maxlength="10" placeholder="Enter your phone number" pattern="\d{3} \d{3} \d{4}" maxlengh="10" title="Please enter a ten digit phone number" required>
         
-                <label for="age">Age:</label><br>
-                <input type="number" id="age" name="age" min="1" placeholder="Enter your age"><br><br>
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="1" placeholder="Enter your age">
         
-                <label>Gender</label><br>
-                <input type="radio" id="male" name="gender" value="male">
+                <label>Gender</label>
                 <label>Male</label>
+                <input type="radio" id="male" name="gender" value="male">
         
-                <input type="radio" id="female" name="gender" value="female">
                 <label>Female</label>
+                <input type="radio" id="female" name="gender" value="female">
+            
         
+                <label for="other">Other</label>
                 <input type="radio" id="other" name="gender" value="other">
-                <label for="other">Other</label><br><br>
+            
         
-                <label for="country">Country</label><br>
+                <label for="country">Country</label>
                 <select id="country" name="country">
                     <option value="usa">United States</option>
                     <option value="sa">South Africa</option>
                     <option value="brzl">Brazil</option>
-                </select><br><br>
+                    <option value="brzl">Botswana</option>
+                    <option value="brzl">Lesotho</option>
+                    <option value="brzl">Argentina</option>
+                    <option value="brzl">Dubai</option>
+                </select>
         
-                <label for="message">Message:</label><br>
-                <textarea name="message" id="message" rows="6" placeholder="Type your message here"></textarea><br><br>
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" rows="6" placeholder="Type your message here"></textarea><br>
         
                 <input type="submit" value="Submit">
                 <input type="reset" value="Reset">
