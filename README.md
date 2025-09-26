@@ -113,6 +113,18 @@ Changelog:
     * Phone Number Field: A phone number input field has been added to the sign-up form complete with a placeholder and input pattern to guide users on the correct format.
     * Dedicated CSS: New CSS rules were added to css/style.css specifically to style the new sign-up page ensuring it has a clean modern look without affecting other pages along with a newly structured css code to allow other pages to be changes individually.
     * Custom Button Hover: The hover effect on the sign-up form's custom file upload and submit buttons has been updated to a vibrant cyan (#01e6ff).
+[26 September 2025]: (Contact page)
+    * Comprehensive Contact Form: Implemented a new complete contact form under the contact-form section.
+    * Styling and Visual Updates (Inline CSS)
+      * Form Container Styling: Applied inline CSS to give the form a professional, defined look with a light gray background (#f9f9f9), a subtle border, and rounded corners.
+      * Input Consistency: Ensured all text inputs, dropdowns, and text areas fill 100% of their container width for a clean, stacked layout.
+      * Focus State: Added a clear visual focus effect (a green/cyan glow) to inputs when they are active, improving accessibility and user experience.
+    * Button Styling:
+      * The Submit button is styled with a prominent black background.
+      * The Reset button is styled with a distinct red background.
+      * Both buttons feature hover effects: Submit changes to a vibrant cyan (#01e6ff) and Reset darkens (#da190b).
+[26 September 2025]: (Membership page)
+    * Added internal styling for the form.
 
 # References:
 All references for this part of the project are included in the Website Project Proposal document, research doc and this README.md file. They are cited using the correct referencing style.
