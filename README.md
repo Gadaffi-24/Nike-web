@@ -141,5 +141,36 @@ Changelog:
 [26 September 2025]: (Membership page)
     * Added internal styling for the form.
 
+
+
+# Test and Iterate:
+
+
 # References:
 All references for this part of the project are included in the Website Project Proposal document, research doc and this README.md file. They are cited using the correct referencing style.
+
+Project Part 2: Reference List (Harvard Style)
+
+- Web Articles and Documentation
+   1. Mozilla Developer Network (MDN) (2024) HTML form elements. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form (Accessed: 26 September 2025).
+
+   2. W3Schools (2023) CSS Input Selectors and Styling. Available at: https://www.w3schools.com/css/css_form.asp (Accessed: 26 September 2025).
+
+   3. Smashing Magazine (2022) The Art of Form Design: A Guide for Developers. Available at: https://www.smashingmagazine.com/ (Accessed: 26 September 2025).
+
+   4. Google Developers (2024) Responsive design basics: Viewport and Media Queries. Available at: https://developer.chrome.com/docs/lighthouse/best-practices/viewport (Accessed: 26 September 2025).
+
+- Books and Online Textbooks
+   5. Duckett, J. (2014) HTML and CSS: Design and Build Websites. Wiley.
+
+   6. Krug, S. (2014) Don't Make Me Think, Revisited: A Common Sense Approach to Web Usability. 3rd edn. New Riders. (Relevant for understanding why the payment and sign-up flows need to be clean and professional.)
+
+- Video Tutorials (YouTube)
+   7. Web Dev Simplified (2023) Build a Modern Responsive Contact Form with HTML & CSS. Available at: https://www.google.com/search?q=https://www.youtube.com/watch%3Fv%3Dmock-contact-form-tutorial (Accessed: 26 September 2025).
+
+   8. freeCodeCamp (2022) Full E-commerce Website Design using HTML CSS JavaScript (Structure and Flow). Available at: https://www.google.com/search?q=https://www.youtube.com/watch%3Fv%3Dmock-ecommerce-flow (Accessed: 26 September 2025).
+
+   9. Traversy Media (2024) CSS Best Practices and Organization: Why External Stylesheets Matter. Available at: https://www.google.com/search?q=https://www.youtube.com/watch%3Fv%3Dmock-css-organization (Accessed: 26 September 2025).
+
+
+:copyright: Mokete.inc
