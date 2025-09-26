@@ -181,4 +181,4 @@ Project Part 2: Reference List (Harvard Style)
    9. Traversy Media (2024) CSS Best Practices and Organization: Why External Stylesheets Matter. Available at: https://www.google.com/search?q=https://www.youtube.com/watch%3Fv%3Dmock-css-organization (Accessed: 26 September 2025).
 
 
-:copyright: Mokete.inc
+:copyright: Mokete.inc 
