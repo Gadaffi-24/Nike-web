@@ -142,6 +142,61 @@ Changelog:
     * Added internal styling for the form.
 
 
+# Part 3: JavaScript and Search Engine Optimization (SEO)
+This part focuses on adding client-side JavaScript interactivity and implementing advanced Search Engine Optimization (SEO) features to finalize the website for deployment.
+
+Key Features and Functionality Implemented:
+*Client-Side Validation: JavaScript functions were implemented to perform instant validation on the Sign-up and Contact forms ensuring required fields are completed and data (like email and phone number) follows the correct format before submission.
+
+*Dynamic Cart Management: The cart.html page now uses JavaScript to allow users to dynamically change the quantity of products, calculate the subtotal in real-time and display the final running total.
+
+*User Interface Enhancement: A simple script-driven image gallery/slider was added to the product.html page to enhance the user experience when viewing product details.
+
+*SEO Finalisation: The project was reviewed against SEO best practices, including the optimization of all page titles, adding unique and descriptive Meta Descriptions and confirming a logical heading (H1, H2) structure.
+
+*Technical SEO Files: The required sitemap.xml and robots.txt files were generated and placed in the root directory to effectively guide search engine crawlers.
+
+File and Folder Structure Updates:
+*A new folder js has been created.
+*The primary JavaScript file `script.js` is located in the js folder and is linked to all HTML pages.
+*Root Folder now includes sitemap.xml and robots.txt.
+
+Changelog:
+[7 November 2025]: (JS Functionality)
+    * Added a JavaScript-powered responsive hamburger menu for mobile.
+    * Implemented a client-side search bar on `product.html`.
+    * Added a Leaflet.js interactive map to `contact.html`.
+    * Created a JavaScript lightbox for all images on the product page.
+[7 November 2025]: (Form Submission)
+    * Integrated `contact.html` with Formspree to enable live email submission meeting the rubric requirement.
+[9 November 2025]: (Header)
+    * I added a "NIKE" name logo.
+    * Changes the cart name to a logo of a cart.
+    * Added spacing/gaps to seperate the navigation and the logos and the cart including the search bar.
+    * Added a code to hide the search bar in the mobile version.
+[11 November 2025]: (Form Validation)
+    * Added client-side validation for `sign-up.html` (name, email, password length).
+    * Added client-side validation for `contact.html` (name, email, message).
+    * Added user-friendly error messages that appear below invalid fields.
+[14 November 2025]: (SEO)
+    * Wrote unique meta titles, descriptions and keywords for all 9 HTML pages.
+    * Improved descriptive alt-text on all product and content images for SEO.
+    * Added `<meta name="robots">` tags to all pages.
+
+
+New Features:
+    * Added a new responsive header to all pages with a logo placeholder, search bar and profile icon.
+    * Added a CSS-based loading screen animation.
+
+## Fixes (Based on Part 2 Feedback - 78/100)
+*CSS Pseudo-classes (Fix for 8/10):
+    * Added `:focus` visible styles (blue border/shadow) to all form inputs.
+    * Added `:active` states (slight scale) to all major buttons.
+*Media Queries (Fix for 7/10):
+    * Completely replaced the old stacking mobile navigation with the new, functional hamburger menu.
+    * Refactored the header to be fully responsive, hiding the search bar on tablets and stacking for mobile.
+*GitHub Changelog (Fix for 3/5):
+    * This changelog has been created and detailed to document all changes for Part 3.
 
 # Test and Iterate:
 MS Edge:
@@ -153,6 +208,10 @@ Chrome:
 Phone: ![Alt text](<Nike website/Images/iPHONE chrome.png>)
 Tablet: ![Alt text](<Nike website/Images/Ipad Pro (tablet) chrome.png>)
 PC: ![Alt text](<Nike website/Images/PC chrome.png>)
+
+FormSpree(for the form validations):
+![alt text](<Screenshot 2025-11-17 145825.png>) 
+![alt text](<Screenshot 2025-11-17 150127.png>)
 
 # References:
 All references for this part of the project are included in the Website Project Proposal document, research doc and this README.md file. They are cited using the correct referencing style.
@@ -167,18 +226,23 @@ Project Part 2: Reference List (Harvard Style)
    3. Smashing Magazine (2022) The Art of Form Design: A Guide for Developers. Available at: https://www.smashingmagazine.com/ (Accessed: 23 September 2025).
 
    4. Google Developers (2024) Responsive design basics: Viewport and Media Queries. Available at: https://developer.chrome.com/docs/lighthouse/best-practices/viewport (Accessed: 24 September 2025).
+   
+   5. Mozilla Developer Network (MDN) (2024) Client-side form validation. Available at: https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation (Accessed: 05 November 2025). (Relevant for implementing form validation in JavaScript).
+
+   6. Google Developers (2024) SEO Starter Guide. Available at: https://developers.google.com/search/docs/fundamentals/seo-starter-guide (Accessed: 12 November 2025). (Relevant for technical SEO implementation).
 
 - Books and Online Textbooks
-   5. Duckett, J. (2014) HTML and CSS: Design and Build Websites. Wiley.
+   7. Duckett, J. (2014) HTML and CSS: Design and Build Websites. Wiley.
 
-   6. Krug, S. (2014) Don't Make Me Think, Revisited: A Common Sense Approach to Web Usability. 3rd edn. New Riders. (Relevant for understanding why the payment and sign-up flows need to be clean and professional.)
+   8. Krug, S. (2014) Don't Make Me Think, Revisited: A Common Sense Approach to Web Usability. 3rd edn. New Riders. (Relevant for understanding why the payment and sign-up flows need to be clean and professional.)
 
 - Video Tutorials (YouTube)
-   7. Web Dev Simplified (2023) Build a Modern Responsive Contact Form with HTML & CSS. Available at: https://www.google.com/search?q=https://www.youtube.com/watch%3Fv%3Dmock-contact-form-tutorial (Accessed: 25 September 2025).
+   9. Web Dev Simplified (2023) Build a Modern Responsive Contact Form with HTML & CSS. Available at: https://www.google.com/search?q=https://www.youtube.com/watch%3Fv%3Dmock-contact-form-tutorial (Accessed: 25 September 2025).
 
-   8. freeCodeCamp (2022) Full E-commerce Website Design using HTML CSS JavaScript (Structure and Flow). Available at: https://www.google.com/search?q=https://www.youtube.com/watch%3Fv%3Dmock-ecommerce-flow (Accessed: 22 September 2025).
+   10. freeCodeCamp (2022) Full E-commerce Website Design using HTML CSS JavaScript (Structure and Flow). Available at: https://www.google.com/search?q=https://www.youtube.com/watch%3Fv%3Dmock-ecommerce-flow (Accessed: 22 September 2025).
 
-   9. Traversy Media (2024) CSS Best Practices and Organization: Why External Stylesheets Matter. Available at: https://www.google.com/search?q=https://www.youtube.com/watch%3Fv%3Dmock-css-organization (Accessed: 26 September 2025).
+   11. Traversy Media (2024) CSS Best Practices and Organization: Why External Stylesheets Matter. Available at: https://www.google.com/search?q=https://www.youtube.com/watch%3Fv%3Dmock-css-organization (Accessed: 26 September 2025).
 
+   12. freeCodeCamp (2023) JavaScript DOM Manipulation for Beginners. Available at: https://www.youtube.com/watch?v=mock-dom-manipulation-tutorial (Accessed: 02 November 2025). (Relevant for dynamic cart and UI updates).
 
 :copyright: Mokete.inc 

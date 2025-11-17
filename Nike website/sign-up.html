@@ -3,32 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - My Website</title>
+    <title>Sign Up - Create Your Nike Account</title>
+    <meta name="description" content="Create your Nike Member account to get exclusive access to products, offers, and your personalized profile.">
+    <meta name="keywords" content="Nike sign up, create account, Nike membership, join Nike">
+    <meta name="robots" content="noindex, nofollow">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <div id="loader"></div>
+
     <header>
+        <div class="container header-container">
+            <a href="index.html" class="header-logo">
+                NIKE
+            </a>
+
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+
         <!-- The navigation menu -->
-        <nav>
-            <ul>
-                <!-- Navigation links to all pages -->
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="product.html">Products</a></li>
-                <li><a href="inspiration section.html">Inspiration</a></li>
-                <li><a href="membership portal.html">Membership</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav>
+        <nav class="navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="inspiration section.html">Inspiration</a></li>
+                    <li><a href="membership portal.html">Membership</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!--The search bar -->
+            <div class="header-right">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <button aria-label="search" class="search-btn">
+                        &#128269; 
+                    </button>
+                </div>
+                <a href="cart.html" class="profile-icon" aria-label="Cart">
+                    &#128722;
+                </a>
+                <a href="membership portal.html" class="profile-icon" aria-label="Profile and Membership">
+                    &#128100;
+                </a>
+            </div>
+        </div>
     </header>
 
     <!-- The main content area of the page -->
     <main class="signup-container">
         <h1>Create an Account</h1>
         <!-- The sign-up form with a professional and clean design -->
-        <form action="#" method="post">
+        <form action="https://formspree.io/f/manakbgg" method="post">
             <p>Join our community to unlock exclusive features and offers.</p>
 
             <!-- Profile Picture Section -->
@@ -48,7 +77,7 @@
 
             <!-- Phone Number Field -->
             <label for="phone-number">Phone Number:</label>
-            <input type="tel" id="phone-number" name="phone-number" placeholder="*** *** ****" pattern="\d{3} \d{3} \d{4}" title="Please enter a ten digit phone number" maxlength="10" required>
+            <input type="tel" id="phone-number" name="phone-number" placeholder="*** *** ****" pattern="\d{3} \d{3} \d{4}" title="Please enter a ten digit phone number" required>
 
             <!-- Password Field -->
             <label for="password">Password:</label>

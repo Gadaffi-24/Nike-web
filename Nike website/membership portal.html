@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Sets the character set for the document -->
     <meta charset="UTF-8">
     <!-- Makes the website look good on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Sets the title that appears in the browser tab -->
-    <title>Membership Portal - My Website</title>
+    <title>Membership Portal - Log In or Sign Up | Nike</title>
+    <meta name="description"
+        content="Log in or sign up for a Nike Membership to get exclusive content, special offers, and a personalized experience.">
+    <meta name="keywords" content="Nike membership, Nike login, sign up, Nike account, Nike+">
+    <meta name="robots" content="index, follow">
     <!-- Links to your CSS file for styling -->
     <link rel="stylesheet" href="css\style.css">
 
@@ -18,27 +23,54 @@
             border-radius: 5px;
             /* box-sizing: border-box is crucial for not affecting width when adding padding */
             box-sizing: border-box;
-            width: 100%; 
+            width: 100%;
         }
     </style>
 </head>
+
 <body>
+
+    <div id="loader"></div>
 
     <!-- The header section at the top of the page -->
     <header>
-        <!-- The navigation menu -->
-        <nav>
-            <ul>
-                <!-- Navigation links to all pages -->
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="product.html">Products</a></li>
-                <li><a href="inspiration section.html">Inspiration</a></li>
-                <li><a href="membership portal.html">Membership</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav>
+        <div class="container header-container">
+            <a href="index.html" class="header-logo">
+                NIKE
+            </a>
+
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+
+            <!-- The navigation menu -->
+            <nav class="navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="inspiration section.html">Inspiration</a></li>
+                    <li><a href="membership portal.html">Membership</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!--The search bar -->
+            <div class="header-right">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <button aria-label="search" class="search-btn">
+                        &#128269;
+                    </button>
+                </div>
+                <a href="cart.html" class="profile-icon" aria-label="Cart">
+                    &#128722;
+                </a>
+                <a href="membership portal.html" class="profile-icon" aria-label="Profile and Membership">
+                    &#128100;
+                </a>
+            </div>
+        </div>
     </header>
 
     <!-- The main content area of the page -->
@@ -51,14 +83,19 @@
         <section class="membership-form-section">
             <h2>Access Your Account</h2>
             <form class="membership-form">
-                <label for="username">Username or Email:</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username or email" title="Enter username or email" required>
+                <label for="username">Username or Email:</label><br>
+                <input type="text" id="username" name="username" placeholder="Enter your username or email"
+                    title="Enter username or email" required><br>
 
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" title="Still remember your password" required>
-                
-                <button type="submit" class="form-button">Log In</button>
-                <a href="sign-up.html">Sign-up</a></li> <!-- to navigate/switch to the sign up page-->
+                <input type="password" id="password" name="password" placeholder="Enter your password"
+                    title="Still remember your password" required>
+
+                <button type="submit" class="checkout-btn"
+                    style="width:100%; margin-top: 1em; background-color: #333;">Log In</button>
+                <p style="text-align: center; margin-top: 1em;">
+                    Don't have an account? <a href="sign-up.html">Sign up now</a>
+                </p> <!-- to navigate/switch to the sign up page-->
             </form>
         </section>
 
@@ -66,13 +103,15 @@
         <section class="benefits-section">
             <h2>Why Become a Member?</h2>
             <ul>
-                <li><strong>Exclusive Content:</strong> Get early access to inspirational stories and behind-the-scenes content.</li>
+                <li><strong>Exclusive Content:</strong> Get early access to inspirational stories and behind-the-scenes
+                    content.</li>
                 <li><strong>Special Offers:</strong> Receive members-only discounts and promotions.</li>
                 <li><strong>Personalized Experience:</strong> Get product recommendations tailored just for you.</li>
-                <li><strong>Community:</strong> Join a community of like-minded individuals and connect with others.</li>
+                <li><strong>Community:</strong> Join a community of like-minded individuals and connect with others.
+                </li>
             </ul>
         </section>
-
+        </div>
     </main>
 
     <!-- The footer section at the bottom of the page -->
@@ -85,4 +124,5 @@
     <script src="js/script.js"></script>
 
 </body>
+
 </html>

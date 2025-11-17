@@ -1,214 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Sets the character set for the document -->
     <meta charset="UTF-8">
     <!-- Makes the website look good on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Sets the title that appears in the browser tab -->
-    <title>Products - My Website</title>
+    <title>Shop All Products - Shoes & Apparel | Nike</title>
+    <meta name="description"
+        content="Discover the latest Nike shoes, clothing, and gear. Shop Air Max, Air Force 1, running shoes, and tech fleece.">
+    <meta name="keywords" content="Nike products, shop Nike, Nike shoes, Nike apparel, Air Max, Tech Fleece">
+    <meta name="robots" content="index, follow">
     <!-- Links to your CSS file for styling -->
     <link rel="stylesheet" href="css\style.css">
 </head>
-<body>
+
+<body class="product-page">
+
+    <div id="loader"></div>
 
     <!-- The header section at the top of the page -->
     <header>
-        <!-- The navigation menu -->
-        <nav>
-            <ul>
-                <!-- Navigation links to all pages -->
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="product.html">Products</a></li>
-                <li><a href="inspiration section.html">Inspiration</a></li>
-                <li><a href="membership portal.html">Membership</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav>
+
+        <div class="container header-container">
+            <a href="index.html" class="header-logo">
+                NIKE
+            </a>
+
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+
+            <!-- The navigation menu -->
+            <nav class="navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="inspiration section.html">Inspiration</a></li>
+                    <li><a href="membership portal.html">Membership</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!--The search bar -->
+            <div class="header-right">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search products...">
+                    <button aria-label="search" class="search-btn">
+                        &#128269;
+                    </button>
+                </div>
+                <a href="cart.html" class="profile-icon" aria-label="Cart">
+                    &#128722;
+                </a>
+                <a href="membership portal.html" class="profile-icon" aria-label="Profile and Membership">
+                    &#128100;
+                </a>
+            </div>
+        </div>
     </header>
 
     <!-- The main content area of the page -->
-    <main>
-        <!-- Main heading for the product page -->
-        <h1>All Products</h1>
-        <p>Discover the latest gear engineered for performance and style.</p>
+    <main class="product-page">
+        <div class="container">
+            <!-- Main heading for the product page -->
+            <h1>All Products</h1>
+            <p>Discover the latest gear engineered for performance and style.</p>
 
-        <!-- --- Shoes Section --- -->
-        <section class="product-category-section">
-            <h2>Shoes</h2>
-            
-            <div class="product-gallery">
-                <!-- Product Card for Shoes 1 -->
-                <div class="product-card">
-                    <img src="Images/air max pro.webp" alt="Product image of Air Max Pro shoes">
-                    <div class="product-details">
-                        <h3>Air Max Pro</h3>
-                        <p class="product-price">$150.00</p>
-                        <p>Experience the ultimate in comfort and style with our new Air Max line.</p>
-                        <div class="option-selector">
-                            <h4>Select Size:</h4>
-                            <div class="options">
-                                <span class="option-item">7</span>
-                                <span class="option-item">8</span>
-                                <span class="option-item">9</span>
-                                <span class="option-item">10</span>
+            <!-- --- Shoes Section --- -->
+            <section class="product-category-section">
+                <h2>Shoes</h2>
+
+                <div class="product-gallery">
+                    <!-- Product Card for Shoes 1 -->
+                    <div class="product-card">
+                        <img src="Images/air max pro.webp"
+                            alt="Nike Air Max Pro shoe in white with pink and black details">
+                        <div class="product-details">
+                            <h3>Air Max Pro</h3>
+                            <p class="product-price">$150.00</p>
+                            <p>Experience the ultimate in comfort and style with our new Air Max line.</p>
+                            <div class="option-selector">
+                                <h4>Select Size:</h4>
+                                <div class="options">
+                                    <span class="option-item">7</span>
+                                    <span class="option-item">8</span>
+                                    <span class="option-item">9</span>
+                                    <span class="option-item">10</span>
+                                </div>
                             </div>
+                            <a href="cart.html" class="add-to-cart">Add to Cart</a>
                         </div>
-                        <a href="cart.html" class="add-to-cart">Add to Cart</a>
+                    </div>
+
+                    <!-- Product Card for Shoes 2 -->
+                    <div class="product-card">
+                        <img src="Images/Nike Air Max 95 Ultra.webp" alt="Nike Air Max 95 Ultra shoe in grey and white">
+                        <div class="product-details">
+                            <h3>Air Max 95 Ultra</h3>
+                            <p class="product-price">$148.50</p>
+                            <p>The Nike Air Max 95 Ultra refreshes a classic design to create something sleek and
+                                lightweight</p>
+                            <div class="option-selector">
+                                <h4>Select Size:</h4>
+                                <div class="options">
+                                    <span class="option-item">7.5</span>
+                                    <span class="option-item">8.5</span>
+                                    <span class="option-item">9.5</span>
+                                    <span class="option-item">10.5</span>
+                                </div>
+                            </div>
+                            <a href="cart.html" class="add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card for Shoes 3 -->
+                    <div class="product-card">
+                        <img src="Images/NOCTA-Nike-Air-Force-1-Love-You-Forever-4.webp"
+                            alt="Nike Nocta Air Force 1 shoe in all white with blue details">
+                        <div class="product-details">
+                            <h3>Nocta Air Force 1</h3>
+                            <p class="product-price">$180.00</p>
+                            <p>NOCTA Air Force 1 Low enriches iconic hoops style with classic children's story
+                                detailing.</p>
+                            <div class="option-selector">
+                                <h4>Select Size:</h4>
+                                <div class="options">
+                                    <span class="option-item">8</span>
+                                    <span class="option-item">9</span>
+                                    <span class="option-item">10</span>
+                                    <span class="option-item">11</span>
+                                    <span class="option-item">12</span>
+                                </div>
+                            </div>
+                            <a href="cart.html" class="add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card for Shoes 4 -->
+                    <div class="product-card">
+                        <img src="Images/NIKE SHOX TL.avif" alt="Nike Shox TL shoe in all white">
+                        <div class="product-details">
+                            <h3>Nike Shox TL</h3>
+                            <p class="product-price">$154.00</p>
+                            <p>The Nike Shox TL takes mechanical cushioning to the next level. A recrafted version of
+                                the 2003 icon.</p>
+                            <div class="option-selector">
+                                <h4>Select Size:</h4>
+                                <div class="options">
+                                    <span class="option-item">6</span>
+                                    <span class="option-item">7</span>
+                                    <span class="option-item">8</span>
+                                    <span class="option-item">9</span>
+                                </div>
+                            </div>
+                            <a href="cart.html" class="add-to-cart">Add to Cart</a>
+                        </div>
                     </div>
                 </div>
+            </section>
 
-                <!-- Product Card for Shoes 2 -->
-                <div class="product-card">
-                    <img src="Images/Nike Air Max 95 Ultra.webp" alt="Product image of Air max shoes">
-                    <div class="product-details">
-                        <h3>Air Max 95 Ultra</h3>
-                        <p class="product-price">$148.50</p>
-                        <p>The Nike Air Max 95 Ultra refreshes a classic design to create something sleek and lightweight</p>
-                        <div class="option-selector">
-                            <h4>Select Size:</h4>
-                            <div class="options">
-                                <span class="option-item">7.5</span>
-                                <span class="option-item">8.5</span>
-                                <span class="option-item">9.5</span>
-                                <span class="option-item">10.5</span>
+            <!-- --- Apparel Section --- -->
+            <section class="product-category-section">
+                <h2>Apparel</h2>
+
+                <div class="product-gallery">
+                    <!-- Product Card for Apparel 1 -->
+                    <div class="product-card">
+                        <img src="Images/Nike Tech.avif" alt="Nike Tech fleece hoodie in ghost white">
+                        <div class="product-details">
+                            <h3>Nike Tech</h3>
+                            <p class="product-price">$109.99</p>
+                            <p>Iconic Nike Windrunner style gets an injection of premium comfort with our
+                                smooth-on-both-sides fleece.</p>
+                            <div class="option-selector">
+                                <h4>Select Color:</h4>
+                                <div class="options color-options">
+                                    <span class="option-item color-black" style="background-color: #000;"></span>
+                                    <span class="option-item color-white"
+                                        style="background-color: #fff; border: 1px solid #ccc;"></span>
+                                    <span class="option-item color-blue" style="background-color: #F8F8FF/#000;"></span>
+                                </div>
                             </div>
+                            <a href="cart.html" class="add-to-cart">Add to Cart</a>
                         </div>
-                        <a href="cart.html" class="add-to-cart">Add to Cart</a>
+                    </div>
+
+                    <!-- Product Card for Apparel 2 -->
+                    <div class="product-card">
+                        <img src="Images/F.C. Barcelona 2025&26 Stadium Home.avif"
+                            alt="F.C. Barcelona 2025/26 home soccer jersey">
+                        <div class="product-details">
+                            <h3>F.C. Barcelona 2025/26 Match Home</h3>
+                            <p class="product-price">$124.99</p>
+                            <p>Their iconic Blaugrana is fused with movement-inspired graphics and bright, energetic
+                                accents.</p>
+                            <div class="option-selector">
+                                <h4>Select Size:</h4>
+                                <div class="options">
+                                    <span class="option-item">S</span>
+                                    <span class="option-item">M</span>
+                                    <span class="option-item">L</span>
+                                    <span class="option-item">XL</span>
+                                </div>
+                            </div>
+                            <a href="cart.html" class="add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card for Apparel 3 -->
+                    <div class="product-card">
+                        <img src="Images/Nike Tech joggers.avif" alt="Nike Tech fleece joggers in white">
+                        <div class="product-details">
+                            <h3>Nike Tech</h3>
+                            <p class="product-price">$89.99</p>
+                            <p>These classic Tech Fleece Joggers offer polished warmth and comfort from our premium,
+                                low-bulk fleece.</p>
+                            <div class="option-selector">
+                                <h4>Select Color:</h4>
+                                <div class="options color-options">
+                                    <span class="option-item" style="background-color: #ccc;"></span>
+                                    <span class="option-item" style="background-color: #001f3f;"></span>
+                                    <span class="option-item" style="background-color: #dc3545;"></span>
+                                </div>
+                            </div>
+                            <a href="cart.html" class="add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card for Apparel 4 -->
+                    <div class="product-card">
+                        <img src="Images/PSG+MNL+TFFILLEDPUFFERJKT+GXTA JACKET.avif"
+                            alt="PSG Nike Life Therma-FIT Football Puffer Jacket in black">
+                        <div class="product-details">
+                            <h3>Men's Nike Life Therma-FIT Puffer Jacket</h3>
+                            <p class="product-price">$89.99</p>
+                            <p>This insulated PSG puffer gives you all the warmth you'll need to take on whatever match
+                                day throws your way.</p>
+                            <div class="option-selector">
+                                <h4>Select Size:</h4>
+                                <div class="options">
+                                    <span class="option-item">S</span>
+                                    <span class="option-item">M</span>
+                                    <span class="option-item">L</span>
+                                    <span class="option-item">XL</span>
+                                </div>
+                            </div>
+                            <a href="cart.html" class="add-to-cart">Add to Cart</a>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Product Card for Shoes 3 -->
-                <div class="product-card">
-                    <img src="Images/NOCTA-Nike-Air-Force-1-Love-You-Forever-4.webp" alt="Product image of af1">
-                    <div class="product-details">
-                        <h3>Nocta AirForce 1</h3>
-                        <p class="product-price">$180.00</p>
-                        <p>NOCTA Air Force 1 Low enriches iconic hoops style with classic children's story detailing. "Love you forever" is written on the midsole and a set of beads.</p>
-                        <div class="option-selector">
-                            <h4>Select Size:</h4>
-                            <div class="options">
-                                <span class="option-item">9</span>
-                                <span class="option-item">10</span>
-                                <span class="option-item">11</span>
-                                <span class="option-item">12</span>
-                            </div>
-                        </div>
-                        <a href="cart.html" class="add-to-cart">Add to Cart</a>
-                    </div>
-                </div>
-
-                <!-- Product Card for Shoes 4 -->
-                <div class="product-card">
-                    <img src="Images/NIKE SHOX TL.avif" alt="Product image of Shox TL">
-                    <div class="product-details">
-                        <h3>Nike Shox TL</h3>
-                        <p class="product-price">$154.00</p>
-                        <p>The Nike Shox TL takes mechanical cushioning to the next level. A recrafted version of the 2003 icon, it features breathable mesh in the upper.</p>
-                        <div class="option-selector">
-                            <h4>Select Size:</h4>
-                            <div class="options">
-                                <span class="option-item">6</span>
-                                <span class="option-item">7</span>
-                                <span class="option-item">8</span>
-                                <span class="option-item">9</span>
-                                <span class="option-item">10</span>
-                                <span class="option-item">11</span>
-                                <span class="option-item">12</span>
-                            </div>
-                        </div>
-                        <a href="cart.html" class="add-to-cart">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- --- Apparel Section --- -->
-        <section class="product-category-section">
-            <h2>Apparel</h2>
-            
-            <div class="product-gallery">
-                <!-- Product Card for Apparel 1 -->
-                <div class="product-card">
-                    <img src="Images/Nike Tech.avif" alt="Product image of a Nike Tech Top">
-                    <div class="product-details">
-                        <h3>Nike Tech</h3>
-                        <p class="product-price">$109.99</p>
-                        <p>Iconic Nike Windrunner style gets an injection of premium comfort with our smooth-on-both-sides fleece.</p>
-                        <div class="option-selector">
-                            <h4>Select Color:</h4>
-                            <div class="options color-options">
-                                <span class="option-item color-black" style="background-color: #000;"></span>
-                                <span class="option-item color-white" style="background-color: #fff; border: 1px solid #ccc;"></span>
-                                <span class="option-item color-blue" style="background-color: #F8F8FF/#000;"></span>
-                            </div>
-                        </div>
-                        <a href="cart.html" class="add-to-cart">Add to Cart</a>
-                    </div>
-                </div>
-
-                <!-- Product Card for Apparel 2 -->
-                <div class="product-card">
-                    <img src="Images/F.C. Barcelona 2025&26 Stadium Home.avif" alt="Product image of soccer t-shirt">
-                    <div class="product-details">
-                        <h3>F.C. Barcelona 2025/26 Match Home</h3>
-                        <p class="product-price">$124.99</p>
-                        <p>Their iconic Blaugrana is fused with movement-inspired graphics and bright, energetic accents to celebrate their fans' unity and devotion to the club.</p>
-                        <div class="option-selector">
-                            <h4>Select Size:</h4>
-                            <div class="options">
-                                <span class="option-item">S</span>
-                                <span class="option-item">M</span>
-                                <span class="option-item">L</span>
-                                <span class="option-item">XL</span>
-                            </div>
-                        </div>
-                        <a href="cart.html" class="add-to-cart">Add to Cart</a>
-                    </div>
-                </div>
-
-                <!-- Product Card for Apparel 3 -->
-                <div class="product-card">
-                    <img src="Images/Nike Tech joggers.avif" alt="Product image of a Tech fleece joggers">
-                    <div class="product-details">
-                        <h3>Nike Tech</h3>
-                        <p class="product-price">$89.99</p>
-                        <p>These classic Tech Fleece Joggers offer polished warmth and comfort made from our premium, low-bulk fleece. Tall cuffs let you show off your kicks.</p>
-                        <div class="option-selector">
-                            <h4>Select Color:</h4>
-                            <div class="options color-options">
-                                <span class="option-item color-gray" style="background-color: #ccc;"></span>
-                                <span class="option-item color-navy" style="background-color: #001f3f;"></span>
-                                <span class="option-item color-red" style="background-color: #dc3545;"></span>
-                            </div>
-                        </div>
-                        <a href="cart.html" class="add-to-cart">Add to Cart</a>
-                    </div>
-                </div>
-
-                <!-- Product Card for Apparel 4 -->
-                <div class="product-card">
-                    <img src="Images/PSG+MNL+TFFILLEDPUFFERJKT+GXTA JACKET.avif" alt="Product image of a PSG  puffer jacket">
-                    <div class="product-details">
-                        <h3>Men's Nike Life Therma-FIT Football Puffer Jacket</h3>
-                        <p class="product-price">$89.99</p>
-                        <p>This insulated PSG puffer gives you all the warmth you'll need to take on whatever match day throws your way. Panels of thick Thermore® Ecodown® insulation are complemented by the roomy hood and storm flap to help keep you covered.</p>
-                        <div class="option-selector">
-                            <h4>Select Size:</h4>
-                            <div class="options">
-                                <span class="option-item">S</span>
-                                <span class="option-item">M</span>
-                                <span class="option-item">L</span>
-                                <span class="option-item">XL</span>
-                            </div>
-                        </div>
-                        <a href="cart.html" class="add-to-cart">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
 
     </main>
 
@@ -222,4 +266,5 @@
     <script src="js/script.js"></script>
 
 </body>
+
 </html>

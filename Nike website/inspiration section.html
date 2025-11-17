@@ -1,53 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Sets the character set for the document -->
     <meta charset="UTF-8">
     <!-- Makes the website look good on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Sets the title that appears in the browser tab -->
-    <title>Inspiration - My Website</title>
+    <title>Inspiration - Find Your Greatness | Nike</title>
+    <meta name="description"
+        content="Find your inspiration with stories, visuals, and community content from Nike. Fuel your passion and keep moving forward.">
+    <meta name="keywords" content="Nike inspiration, motivation, Nike community, stories, greatness">
+    <meta name="robots" content="index, follow">
     <!-- Links to your CSS file for styling -->
     <link rel="stylesheet" href="css\style.css">
 </head>
+
 <body>
+
+    <div id="loader"></div>
 
     <!-- The header section at the top of the page -->
     <header>
-        <!-- The navigation menu -->
-        <nav>
-            <ul>
-                <!-- Navigation links to all pages -->
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="product.html">Products</a></li>
-                <li><a href="inspiration section.html">Inspiration</a></li>
-                <li><a href="membership portal.html">Membership</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav>
+        <div class="container header-container">
+            <a href="index.html" class="header-logo">
+                NIKE
+            </a>
+
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+
+            <!-- The navigation menu -->
+            <nav class="navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="inspiration section.html">Inspiration</a></li>
+                    <li><a href="membership portal.html">Membership</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!--The search bar -->
+            <div class="header-right">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <button aria-label="search" class="search-btn">
+                        &#128269;
+                    </button>
+                </div>
+                <a href="cart.html" class="profile-icon" aria-label="Cart">
+                    &#128722;
+                </a>
+                <a href="membership portal.html" class="profile-icon" aria-label="Profile and Membership">
+                    &#128100;
+                </a>
+            </div>
+        </div>
     </header>
 
     <!-- The main content area of the page -->
     <main>
         <!-- Main heading for the inspiration page -->
         <h1>Find Your Inspiration</h1>
-        <p>Every great journey begins with a single step. Here, we share stories and visuals to fuel your passion and keep you moving forward. We believe that everyone has the potential for greatness, and our goal is to help you find yours.</p>
+        <p>Every great journey begins with a single step. Here, we share stories and visuals to fuel your passion and
+            keep you moving forward. We believe that everyone has the potential for greatness, and our goal is to help
+            you find yours.</p>
 
         <!-- Section with a prominent image -->
         <section>
             <h2>The Power of a Vision</h2>
             <!-- Image 1 -->
             <img src="Images/insperation.jpg" alt="A person jumping, symbolizing a long-term goal.">
-            <p>Your vision is the map to your future. It gives you purpose and a reason to push through challenges. Imagine what you want to achieve, and then commit to the daily effort it takes to get there. The path may be long, but the view from the top is always worth it.</p>
+            <p>Your vision is the map to your future. It gives you purpose and a reason to push through challenges.
+                Imagine what you want to achieve, and then commit to the daily effort it takes to get there. The path
+                may be long, but the view from the top is always worth it.</p>
         </section>
-        
+
         <!-- A section with two side-by-side images and a message -->
         <section class="inspiration-section">
             <div class="inspiration-content">
                 <h2>The Strength of Community</h2>
-                <p>You don't have to do it alone. The right community can provide the support, motivation, and encouragement you need. Share your journey with others, celebrate their successes, and find strength in knowing you are part of a team.</p>
+                <p>You don't have to do it alone. The right community can provide the support, motivation, and
+                    encouragement you need. Share your journey with others, celebrate their successes, and find strength
+                    in knowing you are part of a team.</p>
             </div>
             <div class="image-gallery">
                 <!-- Image 2 -->
@@ -60,7 +98,8 @@
         <!-- A call to action section -->
         <section>
             <h2>Ready to Begin?</h2>
-            <p>Your story is waiting to be written. Don't wait for the perfect moment; take the first step today. We'll be with you every step of the way.</p>
+            <p>Your story is waiting to be written. Don't wait for the perfect moment; take the first step today. We'll
+                be with you every step of the way.</p>
             <a href="membership portal.html">Join Our Community</a>
         </section>
 
@@ -76,4 +115,5 @@
     <script src="js/script.js"></script>
 
 </body>
+
 </html>

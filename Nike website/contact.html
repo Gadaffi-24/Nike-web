@@ -1,137 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Sets the character set for the document -->
     <meta charset="UTF-8">
     <!-- Makes the website look good on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Sets the title that appears in the browser tab -->
-    <title>Contact - My Website</title>
+    <title>Contact Us - Customer Support | Nike</title>
+    <meta name="description"
+        content="Get in touch with the Nike customer support team. Send us a message, find our social media links, or explore our community.">
+    <meta name="keywords" content="Nike contact, Nike support, customer service, Nike email, get in touch">
+    <meta name="robots" content="index, follow">
     <!-- Links to your CSS file for styling -->
-    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css/style.css">
 
-    <style>
-        /* General form container styling */
-        .contact-form form {
-            /* Adds visual separation and background to the form box */
-            border: 1px solid #ddd;
-            padding: 25px;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            /* Ensures font is readable */
-            font-family: Arial, sans-serif;
-            margin-top: 20px;
-        }
-
-        /* Style for all labels to ensure they are on their own line */
-        .contact-form label {
-            display: block;
-            margin-top: 15px;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: #333; /* Darker text for readability */
-        }
-        
-        /* Style for all text inputs, email, tel, number, select, and textarea */
-        .contact-form input[type="text"],
-        .contact-form input[type="email"],
-        .contact-form input[type="tel"],
-        .contact-form input[type="number"],
-        .contact-form select,
-        .contact-form textarea {
-            /* Apply consistent visual style */
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            /* box-sizing: border-box is crucial for not affecting width when adding padding */
-            box-sizing: border-box;
-            width: 100%; 
-        }
-
-        /* Focus state for better accessibility and user experience */
-        .contact-form input:focus,
-        .contact-form select:focus,
-        .contact-form textarea:focus {
-            border-color: #5cb37b;
-            outline: none; /* Remove default browser focus outline */
-            box-shadow: 0 0 5px rgba(92, 179, 123, 0.5);
-        }
-
-        /* Style for the radio button group label (Gender) to separate it */
-        .contact-form label:has(input[type="radio"]) {
-            display: inline-block; /* Keep radio labels next to the input */
-            font-weight: normal;
-            margin-right: 15px;
-        }
-        
-        /* Style for the main 'Gender' label to separate it from options */
-        .contact-form form > label:not([for]) {
-            display: block;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        /* Style for the submit button */
-        .contact-form input[type="submit"] {
-            background-color: #000;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 20px;
-            margin-right: 10px;
-            width: auto;
-        }
-
-        /* Style for the reset button */
-        .contact-form input[type="reset"] {
-            background-color: #f44336;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 20px;
-            width: auto;
-        }
-        
-        /* Hover effect for buttons */
-        .contact-form input[type="submit"]:hover {
-            background-color: #01e6ff;
-        }
-        .contact-form input[type="reset"]:hover {
-            background-color: #da190b;
-        }
-    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 </head>
+
 <body>
+
+    <div id="loader"></div>
 
     <!-- The header section at the top of the page -->
     <header>
-        <!-- The navigation menu -->
-        <nav>
-            <ul>
-                <!-- Navigation links to other pages -->
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="product.html">Products</a></li>
-                <li><a href="inspiration section.html">Inspiration</a></li>
-                <li><a href="membership portal.html">Membership</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav>
+        <div class="container header-container">
+            <a href="index.html" class="header-logo">
+                NIKE
+            </a>
+
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+
+            <!-- The navigation menu -->
+            <nav class="navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="inspiration section.html">Inspiration</a></li>
+                    <li><a href="membership portal.html">Membership</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!--The search bar -->
+            <div class="header-right">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <button aria-label="search" class="search-btn">
+                        &#128269;
+                    </button>
+                </div>
+                <a href="cart.html" class="profile-icon" aria-label="Cart">
+                    &#128722;
+                </a>
+                <a href="membership portal.html" class="profile-icon" aria-label="Profile and Membership">
+                    &#128100;
+                </a>
+            </div>
+        </div>
     </header>
 
     <!-- The main content area of the page -->
     <main>
         <!-- Main heading for the contact page -->
         <h1>Get in Touch</h1>
-        <p>Whether you have a question about our products, need support, or just want to say hello, our team is here to help.</p>
+        <p>Whether you have a question about our products, need support, or just want to say hello, our team is here to
+            help.</p>
 
         <!-- A section for general contact information -->
         <section class="contact-info">
@@ -141,13 +79,19 @@
             <p><strong>Phone:</strong> +353 (0) 15621318</p>
         </section>
 
+        <section>
+            <h2>Find Us</h2>
+            <p>Visit one of our flagship stores.</p>
+            <div id="map"></div>
+        </section>
+
         <!-- A section for social media links -->
         <section class="social-media">
             <h2>Connect With Us</h2>
             <p>Follow us on social media to stay up-to-date with our latest news and inspiration.</p>
             <p>
-                <a href="https://www.facebook.com/nike/">Facebook</a>  
-                <a href="https://www.tiktok.com/@nike">TikTok</a>  
+                <a href="https://www.facebook.com/nike/">Facebook</a>
+                <a href="https://www.tiktok.com/@nike">TikTok</a>
                 <a href="https://www.instagram.com/nike">Instagram</a>
             </p>
         </section>
@@ -156,60 +100,65 @@
         <section class="contact-visual">
             <div class="contact-image">
                 <!-- A placeholder image for the contact page -->
-                <img src="Images/contact page.jpg" alt="A professional and friendly contact image." style="height: 700px; width: 700px;">
+                <img src="Images/contact page.jpg" alt="A professional and friendly contact image."
+                    style="height: 700px; width: 700px;">
             </div>
             <div class="contact-message">
                 <h2>Our Story, Your Story</h2>
-                <p>We're more than just a brand; we're a community of people who are passionate about what we do. We believe in the power of connection and can't wait to hear from you!</p>
+                <p>We're more than just a brand; we're a community of people who are passionate about what we do. We
+                    believe in the power of connection and can't wait to hear from you!</p>
             </div>
         </section>
 
         <!-- A placeholder for the contact form -->
         <section class="contact-form">
             <h2>Send Us a Message</h2>
-            <form>
-                <!-- Form fields will go here, like name, email, and message -->
+            <!-- Form fields will go here, like name, email, and message -->
+            <form action="https://formspree.io/f/manakbgg" method="POST">
                 <p>Please use this form for a quick message, and we'll get back to you as soon as possible.</p>
-            </form>
-            <form action="submit" method="post">
+
                 <label for="name">Full Name:</label>
-                <input type="text" name="name" id="name" placeholder="Enter your name" title="Enter your full name" required>
-        
+                <input type="text" name="name" id="name" placeholder="Enter your name" title="Enter your full name"
+                    required>
+
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email" placeholder="Enter your email" title="Enter email address" required>
-        
-                <label for="phone number">Phone Number:</label>
-                <input type="tel" id="phone number" name="phone number" maxlength="10" placeholder="Enter your phone number" pattern="\d{3} \d{3} \d{4}" maxlengh="10" title="Please enter a ten digit phone number" required>
-        
+                <input type="email" name="email" id="email" placeholder="Enter your email" title="Enter email address"
+                    required>
+
+                <label for="phone-number">Phone Number:</label>
+                <input type="tel" id="phone-number" name="phone-number" 
+                    placeholder="Enter your phone number" pattern="\d{3} \d{3} \d{4}"
+                    title="Please enter a ten digit phone number" required>
+
                 <label for="age">Age:</label>
                 <input type="number" id="age" name="age" min="1" placeholder="Enter your age">
-        
-                <label>Gender</label>
-                <label>Male</label>
+
+                <label>Gender</label><br>
+                <label for="male">Male</label>
                 <input type="radio" id="male" name="gender" value="male">
-        
-                <label>Female</label>
+
+                <label for="female">Female</label>
                 <input type="radio" id="female" name="gender" value="female">
-            
-        
-                <label for="other">Other</label>
-                <input type="radio" id="other" name="gender" value="other">
-            
-        
+
+
+                <label for="other-gender">Other</label>
+                <input type="radio" id="other-gender" name="gender" value="other">
+
+
                 <label for="country">Country</label>
                 <select id="country" name="country">
                     <option value="usa">United States</option>
                     <option value="sa">South Africa</option>
                     <option value="brzl">Brazil</option>
-                    <option value="brzl">Botswana</option>
-                    <option value="brzl">Lesotho</option>
-                    <option value="brzl">Argentina</option>
-                    <option value="brzl">Dubai</option>
+                    <option value="bwa">Botswana</option>
+                    <option value="lso">Lesotho</option>
+                    <option value="arg">Argentina</option>
+                    <option value="dub">Dubai</option>
                 </select>
-        
+
                 <label for="message">Message:</label>
                 <textarea name="message" id="message" rows="6" placeholder="Type your message here"></textarea><br>
-        
+
                 <input type="submit" value="Submit">
                 <input type="reset" value="Reset">
             </form>
@@ -223,8 +172,12 @@
         <p>&copy; 2025 My Website. All Rights Reserved.</p>
     </footer>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
     <!-- Links to your JavaScript file for functionality -->
     <script src="js/script.js"></script>
 
 </body>
+
 </html>

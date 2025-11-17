@@ -1,32 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Sets the character set for the document -->
     <meta charset="UTF-8">
     <!-- Makes the website look good on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Sets the title that appears in the browser tab -->
-    <title>Payment - My Website</title>
+    <title>Secure Payment - Checkout | Nike</title>
+    <meta name="description"
+        content="Complete your purchase with our secure payment gateway. Enter your payment details to finalize your Nike order.">
+    <meta name="keywords" content="Nike payment, Nike checkout, secure payment, buy Nike">
+    <meta name="robots" content="noindex, nofollow">
     <!-- Links to your CSS file for styling -->
     <link rel="stylesheet" href="css\style.css">
 </head>
+
 <body>
+
+    <div id="loader"></div>
 
     <!-- The header section at the top of the page -->
     <header>
-        <!-- The navigation menu -->
-        <nav>
-            <ul>
-                <!-- Navigation links to other pages, including the new payment page -->
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="product.html">Products</a></li>
-                <li><a href="inspiration section.html">Inspiration</a></li>
-                <li><a href="membership portal.html">Membership</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav>
+        <div class="container header-container">
+            <a href="index.html" class="header-logo">
+                NIKE
+            </a>
+
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+
+            <!-- The navigation menu -->
+            <nav class="navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="inspiration section.html">Inspiration</a></li>
+                    <li><a href="membership portal.html">Membership</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!--The search bar -->
+            <div class="header-right">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <button aria-label="search" class="search-btn">
+                        &#128269;
+                    </button>
+                </div>
+                <a href="cart.html" class="profile-icon" aria-label="Cart">
+                    &#128722;
+                </a>
+                <a href="membership portal.html" class="profile-icon" aria-label="Profile and Membership">
+                    &#128100;
+                </a>
+            </div>
+        </div>
     </header>
 
     <!-- The main content area of the page -->
@@ -41,60 +73,27 @@
             </div>
             <!-- Card Number Field -->
             <label for="card-number">Card Number:</label>
-            <input 
-                type="text" 
-                id="card-number" 
-                name="card-number" 
-                placeholder="xxxx xxxx xxxx xxxx"
-                pattern="\d{4} \d{4} \d{4} \d{4}"
-                maxlength="16"
-                title="Enter a 16-digit card number"
-                required>
+            <input type="text" id="card-number" name="card-number" placeholder="xxxx xxxx xxxx xxxx"
+                pattern="\d{4} \d{4} \d{4} \d{4}" maxlength="19" title="Enter a 16-digit card number" required>
 
             <!-- Cardholder Name Field -->
             <label for="card-name">Cardholder Name:</label>
-            <input 
-                type="text" 
-                id="card-name" 
-                name="card-name" 
-                placeholder="Name on Card"
-                required>
+            <input type="text" id="card-name" name="card-name" placeholder="Name on Card" required>
 
             <!-- Expiration Date Fields -->
             <label for="expiry-month">Expiration Date:</label>
             <div class="expiry-date-container">
-                <input 
-                    type="text" 
-                    id="expiry-month" 
-                    name="expiry-month" 
-                    placeholder="MM"
-                    pattern="\d{2}"
-                    maxlength="2"
-                    title="Enter a two-digit month"
-                    required>
+                <input type="text" id="expiry-month" name="expiry-month" placeholder="MM" pattern="\d{2}" maxlength="2"
+                    title="Enter a two-digit month" required>
                 <span>/</span>
-                <input 
-                    type="text" 
-                    id="expiry-year" 
-                    name="expiry-year" 
-                    placeholder="YY"
-                    pattern="\d{2}"
-                    maxlength="2"
-                    title="Enter a two-digit year"
-                    required>
+                <input type="text" id="expiry-year" name="expiry-year" placeholder="YY" pattern="\d{2}" maxlength="2"
+                    title="Enter a two-digit year" required>
             </div>
 
             <!-- CVV Field -->
             <label for="cvv">CVV:</label>
-            <input 
-                type="text" 
-                id="cvv" 
-                name="cvv" 
-                placeholder="xxx"
-                pattern="\d{3,4}"
-                maxlength="3"
-                title="Enter a 3 or 4 digit CVV"
-                required>
+            <input type="text" id="cvv" name="cvv" placeholder="xxx" pattern="\d{3,4}" maxlength="3"
+                title="Enter a 3 or 4 digit CVV" required>
 
             <!-- The "Pay Now" button to submit the form -->
             <button type="submit">Pay Now</button>
@@ -111,4 +110,5 @@
     <script src="js/script.js"></script>
 
 </body>
+
 </html>

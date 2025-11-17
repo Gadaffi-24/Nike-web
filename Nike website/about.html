@@ -1,67 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Sets the character set for the document -->
     <meta charset="UTF-8">
     <!-- Makes the website look good on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Sets the title that appears in the browser tab -->
-    <title>About Us - My Website</title>
+    <title>About Us - Our Story | Nike</title>
+    <meta name="description"
+        content="Learn about Nike's mission, our story, and the team dedicated to bringing inspiration and innovation to every athlete in the world.">
+    <meta name="keywords" content="Nike story, Nike mission, about Nike, Nike team, innovation">
+    <meta name="robots" content="index, follow">
     <!-- Links to your CSS file for styling -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
+    <div id="loader"></div>
 
     <!-- The header section at the top of the page -->
     <header>
-        <!-- The navigation menu -->
-        <nav>
-            <ul>
-                <!-- Navigation links to other pages -->
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="product.html">Products</a></li>
-                <li><a href="inspiration section.html">Inspiration</a></li>
-                <li><a href="membership portal.html">Membership</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+
+        <div class="container header-container">
+            <a href="index.html" class="header-logo">
+                NIKE
+            </a>
+
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+
+            <!-- The navigation menu -->
+            <nav class="navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="inspiration section.html">Inspiration</a></li>
+                    <li><a href="membership portal.html">Membership</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!--The search bar -->
+            <div class="header-right">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <button aria-label="search" class="search-btn">
+                        &#128269;
+                    </button>
+                </div>
+                <a href="cart.html" class="profile-icon" aria-label="Cart">
+                    &#128722;
+                </a>
+                <a href="membership portal.html" class="profile-icon" aria-label="Profile and Membership">
+                    &#128100;
+                </a>
+            </div>
+        </div>
     </header>
 
     <!-- The main content area of the page -->
     <main>
         <!-- Main heading for the about page -->
         <h1>Our Story: It's About You</h1>
-        
+
         <!-- Introduction to the brand's purpose -->
-        <p>We believe that true greatness isn't just about a brand; it's about the people who make it special. Our journey began with a simple idea: to inspire and empower people to be their best selves. We're dedicated to helping you achieve your dreams, big or small, because your story is what truly inspires us.</p>
-        
+        <p>We believe that true greatness isn't just about a brand; it's about the people who make it special. Our
+            journey began with a simple idea: to inspire and empower people to be their best selves. We're dedicated to
+            helping you achieve your dreams, big or small, because your story is what truly inspires us.</p>
+
         <!-- Section for key statements, similar to a mission or vision -->
         <section>
             <h2>Our Purpose</h2>
             <!-- A key statement about the brand's mission -->
             <h3>Bringing Inspiration to Everyone</h3>
-            <p>Our mission is to bring inspiration and innovation to everyone, no matter where they are on their journey. We're here to support you with products and ideas that help you push your limits.</p>
-            
+            <p>Our mission is to bring inspiration and innovation to everyone, no matter where they are on their
+                journey. We're here to support you with products and ideas that help you push your limits.</p>
+
             <!-- A key statement about the brand's community -->
             <h3>Building a Community of Believers</h3>
-            <p>We are more than a brand; we are a community. We stand for courage, determination, and the belief that you can overcome any challenge. Join us and be part of a team that celebrates every victory and learns from every setback.</p>
+            <p>We are more than a brand; we are a community. We stand for courage, determination, and the belief that
+                you can overcome any challenge. Join us and be part of a team that celebrates every victory and learns
+                from every setback.</p>
         </section>
 
         <!-- A section about the people behind the brand -->
         <section>
             <h2>Meet the Team</h2>
-            <p>Our team is made up of passionate people who are committed to creating great products and building a strong community. We're here to listen, learn, and grow with you every step of the way.</p>
-            
+            <p>Our team is made up of passionate people who are committed to creating great products and building a
+                strong community. We're here to listen, learn, and grow with you every step of the way.</p>
+
             <!-- This is the new container for the team members to make them sit side-by-side -->
-            <div class="team-container">
+            <div class="team-container image-gallery">
                 <!-- Placeholder for team member 1 -->
                 <div class="team-member">
                     <img src="Images/nike ceo.jpg" alt="Placeholder image for the ceo.">
                     <!-- Caption for image 1 -->
                     <p>Elliott Hill - CEO</p>
                 </div>
-                
+
                 <!-- Placeholder for team member 2 -->
                 <div class="team-member">
                     <img src="Images/vp_for_nike.jpg" alt="Placeholder image for the vp.">
@@ -70,11 +110,12 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Call to action to engage with the brand -->
         <section>
             <h2>Ready to Start Your Journey?</h2>
-            <p>Explore our products, read inspiring stories, and become a member of our community today. Your adventure is waiting!</p>
+            <p>Explore our products, read inspiring stories, and become a member of our community today. Your adventure
+                is waiting!</p>
             <a href="product.html">Explore Products</a>
         </section>
 
@@ -90,4 +131,5 @@
     <script src="js/script.js"></script>
 
 </body>
+
 </html>
