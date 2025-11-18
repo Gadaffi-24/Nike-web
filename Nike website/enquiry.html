@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike | Partnership & Investment Enquiries</title>
+    <meta name="description" content="Submit your serious business proposals, investment queries, and sponsorship requests directly to the Nike partnership team.">
+    <meta name="keywords" content="Nike partnerships, Nike investments, Nike sponsorship, business proposals, corporate contact, media relations">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* General styling for the main content area */
+        .enquiry-header {
+            text-align: center;
+            padding: 60px 0 40px;
+            background-color: #f5f5f5;
+        }
+
+        .enquiry-header h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .enquiry-header p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Form Container Styling - The Core Design */
+        .enquiry-form-container {
+            max-width: 900px; /* Wider form for better field arrangement */
+            margin: 40px auto 80px;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+        }
+
+        /* Form Layout and Inputs */
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+            font-size: 0.95rem;
+        }
+
+        .form-group input:not([type="submit"]),
+        .form-group select,
+        .form-group textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            background-color: #fff;
+        }
+
+        /* Custom Cyan Focus State (Consistent with Part 2 Changelog) */
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #01e6ff; /* Vibrant Cyan */
+            box-shadow: 0 0 0 3px rgba(1, 230, 255, 0.4);
+            outline: none;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        /* Submit Button Styling */
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #1a1a1a; /* Prominent Black */
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+
+        .submit-btn:hover {
+            background-color: #01e6ff; /* Cyan Hover Effect */
+            color: #1a1a1a;
+        }
+
+        /* Error message styling for JS validation */
+        .error-message {
+            color: #e6014e; /* Red color for errors */
+            font-size: 0.85rem;
+            margin-top: 5px;
+            min-height: 18px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            .enquiry-form-container {
+                margin: 20px 15px 40px;
+                padding: 20px;
+            }
+            .enquiry-header {
+                padding: 40px 15px 20px;
+            }
+            .enquiry-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- The header section at the top of the page -->
+    <header>
+
+        <div class="container header-container">
+            <a href="index.html" class="header-logo">
+                NIKE
+            </a>
+
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+
+            <!-- The navigation menu -->
+            <nav class="navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="inspiration section.html">Inspiration</a></li>
+                    <li><a href="membership portal.html">Membership</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!--The search bar -->
+            <div class="header-right">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search products...">
+                    <button aria-label="search" class="search-btn">
+                        &#128269;
+                    </button>
+                </div>
+                <a href="cart.html" class="profile-icon" aria-label="Cart">
+                    &#128722;
+                </a>
+                <a href="membership portal.html" class="profile-icon" aria-label="Profile and Membership">
+                    &#128100;
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="enquiry-page">
+        <!-- Page Header -->
+        <section class="enquiry-header">
+            <h1>Partner with Nike</h1>
+            <p>Please use this dedicated form for serious business proposals, sponsorship requests, and investment opportunities. We look forward to reviewing your inquiry.</p>
+        </section>
+
+        <!-- Enquiry Form Section -->
+        <div class="container">
+            <div class="enquiry-form-container">
+                <form id="enquiryForm" action="https://formspree.io/f/manakbgg" method="POST">
+                    
+                    <!-- Row 1: Name and Email -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Your full name">
+                            <p class="error-message" id="nameError"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="name@company.com">
+                            <p class="error-message" id="emailError"></p>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Phone and Enquiry Type -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+1 555 555 5555">
+                            <p class="error-message" id="phoneError"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="type">Enquiry Type *</label>
+                            <select id="type" name="Enquiry Type" required>
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="Investments">Investments & Financial Proposals</option>
+                                <option value="Sponsorship">Athletic or Event Sponsorship</option>
+                                <option value="Media/PR">Media / Public Relations</option>
+                                <option value="Partnership">Strategic Partnership Proposal</option>
+                                <option value="Other">Other Business Inquiry</option>
+                            </select>
+                            <p class="error-message" id="typeError"></p>
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Subject -->
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required placeholder="Brief summary of your proposal">
+                        <p class="error-message" id="subjectError"></p>
+                    </div>
+
+                    <!-- Row 4: Message -->
+                    <div class="form-group">
+                        <label for="message">Detailed Message *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Please provide full details of your proposal..."></textarea>
+                        <p class="error-message" id="messageError"></p>
+                    </div>
+
+                    <button type="submit" class="submit-btn">SEND ENQUIRY</button>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- The footer section at the bottom of the page -->
+    <footer>
+        <!-- Simple copyright notice -->
+        <p>&copy; 2025 My Website. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Links to your JavaScript file for functionality -->
+    <script src="js/script.js"></script>
+</body>
+</html>

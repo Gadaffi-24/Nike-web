@@ -1,7 +1,41 @@
-/* Wait for the DOM to be fully loaded before running any scripts */
-document.addEventListener('DOMContentLoaded', () => {
+/* Website Interactivity and Validation Script, This file handles all client-side JavaScript features */
 
-    /* --- 1. Mobile Navigation Toggle --- */
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("Script.js loaded successfully.");
+
+    /* Helper Functions for Validation (Consolidated & Universal) */
+
+    /* Shows an error message below the input field. It expects the error element to be the immediate next sibling of the input. */
+    function showError(input, message) {
+        // Look for the next element (which should be the error message span/p)
+        let errorEl = input.nextElementSibling;
+        
+        // Ensure it's the right element before setting content
+        if (errorEl && errorEl.classList.contains('error-message')) {
+            errorEl.textContent = message;
+        } else {
+            // Fallback for elements without an immediate error sibling (less ideal)
+            console.error(`Error element not found next to input: ${input.id}`);
+        }
+    }
+
+    /* Clears the error message for a specific input field. */
+    function clearError(input) {
+        let errorEl = input.nextElementSibling;
+        if (errorEl && errorEl.classList.contains('error-message')) {
+            errorEl.textContent = '';
+        }
+    }
+
+    /* Utility function for consistent email validation across all forms. */
+    const isValidEmail = (email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    };
+
+    /* ---------------------------------------------------------------------- */
+                        /* 1. Mobile Navigation Toggle */
+    /* ---------------------------------------------------------------------- */
     const navToggle = document.querySelector('.nav-toggle');
     const navigation = document.querySelector('.navigation');
     const navList = document.querySelector('.nav-list');
@@ -15,7 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* --- 2. Dynamic Search (for Product Page) --- */
+    /* ---------------------------------------------------------------------- */
+                   /* 2. Dynamic Search (for Product Page) */
+    /* ---------------------------------------------------------------------- */
     const searchInput = document.getElementById('searchInput');
     // Only run this search code if we are on the product page
     if (searchInput && document.body.classList.contains('product-page')) {
@@ -25,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             products.forEach(product => {
                 const title = product.querySelector('h3').textContent.toLowerCase();
-                // If the product title includes the filter text, show it. Otherwise, hide it.
+                // If the product title includes the filter text show it, Otherwise hide it.
                 if (title.includes(filter)) {
                     product.style.display = 'block';
                 } else {
@@ -35,7 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* --- 3. Gallery Lightbox (for Product Page) --- */
+    /* ---------------------------------------------------------------------- */
+                    /*  3. Gallery Lightbox (for Product Page) */
+    /* ---------------------------------------------------------------------- */
     const productImages = document.querySelectorAll('.product-card img');
     if (productImages.length > 0) {
         // Create the lightbox structure once and append it to the body
@@ -59,13 +97,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* --- 4. Interactive Map (for Contact Page) --- */
-    // The Leaflet library is loaded via CDN in contact.html
-    // This code will only run if it finds an element with id="map"
+    /* ---------------------------------------------------------------------- */
+                  /* 4. Interactive Map (for Contact Page) */
+    /* ---------------------------------------------------------------------- */
+    // The Leaflet library loaded via CDN in contact.html
     if (document.getElementById('map')) {
-        // Set coordinates (e.g., Nike HQ in Oregon)
-        const map = L.map('map').setView([45.5152, -122.6784], 13); 
-        
+        // Set coordinates (Nike HQ in Oregon)
+        const map = L.map('map').setView([45.5152, -122.6784], 13);
+
         // Add the map 'skin'
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -77,7 +116,9 @@ document.addEventListener('DOMContentLoaded', () => {
             .openPopup();
     }
 
-    /* --- 5. Sign-Up Form Validation --- */
+    /* ---------------------------------------------------------------------- */
+                        /* 5. Sign-Up Form Validation */
+    /* ---------------------------------------------------------------------- */
     const signUpForm = document.querySelector('main.signup-container form');
     if (signUpForm) {
         const fullName = document.getElementById('full-name');
@@ -86,9 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         signUpForm.addEventListener('submit', (e) => {
             let isValid = true;
-            // Prevent form submission to check validation
-            e.preventDefault(); 
-            
+            e.preventDefault(); // Prevent form submission to check validation
+
             // Validate Full Name
             if (fullName.value.trim() === '') {
                 showError(fullName, 'Full Name is required.');
@@ -97,9 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 clearError(fullName);
             }
 
-            // Validate Email
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email.value)) {
+            // Validate Email (Using centralized helper)
+            if (!isValidEmail(email.value.trim())) {
                 showError(email, 'Please enter a valid email address.');
                 isValid = false;
             } else {
@@ -116,46 +155,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // If all checks pass, submit the form (or show success)
             if (isValid) {
-                alert('Sign up successful!');
-                // In a real app, you would now submit the form
-                // signUpForm.submit(); 
+                console.log('Sign up successful! Form can now be submitted.');
+                 signUpForm.submit();
             }
         });
     }
 
-    /* --- 6. Contact Form Validation --- */
+    /* ---------------------------------------------------------------------- */
+                       /* 6. Contact Form Validation */
+    /* ---------------------------------------------------------------------- */
     const contactForm = document.querySelector('.contact-form form[method="post"]');
     if (contactForm) {
-        const name = document.getElementById('name');
-        const email = document.getElementById('email');
-        const message = document.getElementById('message');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
 
         contactForm.addEventListener('submit', (e) => {
             let isValid = true;
             
             // Validate Name
-            if (name.value.trim() === '') {
-                showError(name, 'Full Name is required.');
+            if (nameInput.value.trim() === '') {
+                showError(nameInput, 'Full Name is required.');
                 isValid = false;
             } else {
-                clearError(name);
+                clearError(nameInput);
             }
 
-            // Validate Email
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email.value)) {
-                showError(email, 'Please enter a valid email address.');
+            // Validate Email (Using centralized helper)
+            if (!isValidEmail(emailInput.value.trim())) {
+                showError(emailInput, 'Please enter a valid email address.');
                 isValid = false;
             } else {
-                clearError(email);
+                clearError(emailInput);
             }
 
             // Validate Message
-            if (message.value.trim() === '') {
-                showError(message, 'Message is required.');
+            if (messageInput.value.trim() === '') {
+                showError(messageInput, 'Message is required.');
                 isValid = false;
             } else {
-                clearError(message);
+                clearError(messageInput);
             }
 
             if (!isValid) {
@@ -164,27 +203,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // If valid, the form will submit to Formspree
         });
     }
-
-    /* --- Helper Functions for Validation --- */
-    function showError(input, message) {
-        let errorSpan = input.nextElementSibling;
-        // Check if the next element is an error span, if not, create one
-        if (!errorSpan || !errorSpan.classList.contains('error-message')) {
-            errorSpan = document.createElement('span');
-            errorSpan.className = 'error-message';
-            input.parentNode.insertBefore(errorSpan, input.nextSibling);
-        }
-        errorSpan.textContent = message;
-    }
-
-    function clearError(input) {
-        let errorSpan = input.nextElementSibling;
-        if (errorSpan && errorSpan.classList.contains('error-message')) {
-            errorSpan.textContent = '';
-        }
-    }
-
-    /* --- 7. Loading Screen --- */
+    
+    /* ---------------------------------------------------------------------- */
+                           /* 7. Loading Screen */
+    /* ---------------------------------------------------------------------- */
     const loader = document.getElementById('loader');
     if (loader) {
         window.addEventListener('load', () => {
@@ -192,7 +214,67 @@ document.addEventListener('DOMContentLoaded', () => {
             // Wait for fade-out transition to finish before setting display to none
             setTimeout(() => {
                 loader.style.display = 'none';
-            }, 500); // Must match transition time in CSS
+            }, 500); // Matchs transition time in CSS
+        });
+    }
+
+    /* ---------------------------------------------------------------------- */
+             /* 8. Enquiry Form Validation (NEW for enquiry.html) */
+    /* ---------------------------------------------------------------------- */
+    const enquiryForm = document.getElementById('enquiryForm');
+
+    if (enquiryForm) {
+        enquiryForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent default submission initially to run validation
+            let isValid = true;
+
+            // Get form field elements
+            const nameEl = document.getElementById('name');
+            const emailEl = document.getElementById('email');
+            const typeEl = document.getElementById('type');
+            const subjectEl = document.getElementById('subject');
+            const messageEl = document.getElementById('message');
+
+            // 1. Validate Full Name
+            if (nameEl.value.trim() === "") {
+                showError(nameEl, "Full Name is required.");
+                isValid = false;
+            } else { clearError(nameEl); }
+
+            // 2. Validate Email Address
+            if (emailEl.value.trim() === "") {
+                showError(emailEl, "Email is required.");
+                isValid = false;
+            } else if (!isValidEmail(emailEl.value.trim())) {
+                showError(emailEl, "Please enter a valid email address.");
+                isValid = false;
+            } else { clearError(emailEl); }
+
+            // 3. Validate Enquiry Type selection
+            if (typeEl.value === "" || typeEl.value === "Select an option") {
+                showError(typeEl, "Please select an Enquiry Type.");
+                isValid = false;
+            } else { clearError(typeEl); }
+
+            // 4. Validate Subject
+            if (subjectEl.value.trim() === "") {
+                showError(subjectEl, "Subject is required.");
+                isValid = false;
+            } else { clearError(subjectEl); }
+
+            // 5. Validate Detailed Message
+            if (messageEl.value.trim() === "") {
+                showError(messageEl, "A detailed message is required.");
+                isValid = false;
+            } else { clearError(messageEl); }
+
+            // If validation passes, manually submit the form to Formspree
+            if (isValid) {
+                console.log("Enquiry Form validated successfully. Submitting to Formspree...");
+                this.submit(); // Uses the form's action attribute to submit
+            } else {
+                console.log("Enquiry Form validation failed. User prompted to correct errors.");
+            }
         });
     }
 });

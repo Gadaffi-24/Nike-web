@@ -182,6 +182,14 @@ Changelog:
     * Wrote unique meta titles, descriptions and keywords for all 9 HTML pages.
     * Improved descriptive alt-text on all product and content images for SEO.
     * Added `<meta name="robots">` tags to all pages.
+[18 November 2025]: (Enquiry form/page)
+    * New Page: Enquiry Form	Added a new Enquiry Form page for serious investment and partnership proposals.
+    * Multi-option Dropdown	Form now includes dropdown options for Investments, Sponsorship, and Partnerships.
+    * Design Consistency	The new form maintains the modern, black-and-cyan Nike-style design aesthetic.
+    * SEO Optimization	Implemented Meta Description and Keywords to improve search visibility for business terms.
+    * Validation Update	Updated js/script.js to add a new validation function for the Enquiry Form.
+    * Formspree Integration	Validation ensures all required fields are checked before submission to Formspree.
+    * Added a hyperlink that takes you to the enquiry page from the contact page instead of putting it on the header as it would not be pleasing.
 
 
 New Features:
@@ -203,6 +211,7 @@ MS Edge:
 Phone: ![Alt text](<Nike website/Images/Mobile.png>)
 Tablet: ![Alt text](<Nike website/Images/Ipad Pro (tablet).png>)
 PC: ![Alt text](<Nike website/Images/Desktop version.png>)
+    ![alt text](<Nike website/Screenshots/Enquiry page.png>)
 
 Chrome:
 Phone: ![Alt text](<Nike website/Images/iPHONE chrome.png>)
@@ -210,8 +219,13 @@ Tablet: ![Alt text](<Nike website/Images/Ipad Pro (tablet) chrome.png>)
 PC: ![Alt text](<Nike website/Images/PC chrome.png>)
 
 FormSpree(for the form validations):
-![alt text](<Screenshot 2025-11-17 145825.png>) 
-![alt text](<Screenshot 2025-11-17 150127.png>)
+ ![alt text](<Nike website/Screenshots/Screenshot 2025-11-17 150127.png>) 
+ ![alt text](<Nike website/Screenshots/Screenshot 2025-11-17 145825.png>)
+
+
+Navigation fix for mobile version:
+![alt text](<Nike website/Screenshots/Screenshot 2025-11-18 114702.png>) 
+![alt text](<Nike website/Screenshots/Screenshot 2025-11-18 114652.png>)
 
 # References:
 All references for this part of the project are included in the Website Project Proposal document, research doc and this README.md file. They are cited using the correct referencing style.
