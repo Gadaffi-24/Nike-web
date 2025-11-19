@@ -278,3 +278,80 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+/* ---------------------------------------------------------------------- */
+                    /* 9. Cart Page Functionality */
+/* ---------------------------------------------------------------------- */
+    if (document.body.classList.contains('cart-page')) {
+        
+        const cartItems = document.querySelectorAll('.cart-item');
+        const subtotalEl = document.querySelector('.subtotal-price');
+        const totalEl = document.querySelector('.total-price');
+        const shippingEl = document.querySelector('.shipping-price');
+
+        // Helper function: Turns "$150.00" into the number 150.00
+        const parsePrice = (str) => {
+            return parseFloat(str.replace('$', '').replace(',', ''));
+        };
+
+        // recalculate totals
+        const updateCartTotal = () => {
+            let subtotal = 0;
+            const currentItems = document.querySelectorAll('.cart-item');
+
+            currentItems.forEach(item => {
+                const priceElement = item.querySelector('.item-price');
+                const quantityElement = item.querySelector('.quantity-value');
+                
+                // for raw values
+                const price = parsePrice(priceElement.textContent);
+                const quantity = parseInt(quantityElement.textContent);
+
+                // subtotal
+                subtotal += (price * quantity);
+            });
+
+            // Update Subtotal
+            subtotalEl.textContent = '$' + subtotal.toFixed(2);
+
+            // Calculate Final Total (Subtotal + Shipping)
+            const shipping = parsePrice(shippingEl.textContent); 
+            const total = subtotal + shipping;
+
+            // Update Total
+            totalEl.textContent = '$' + total.toFixed(2);
+        };
+
+        // Attach Event Listeners to every item currently in the cart
+        cartItems.forEach(item => {
+            const minusBtn = item.querySelectorAll('.quantity-btn')[0]; // First button is "-"
+            const plusBtn = item.querySelectorAll('.quantity-btn')[1];  // Second button is "+"
+            const quantityVal = item.querySelector('.quantity-value');
+            const removeBtn = item.querySelector('.remove-btn');
+
+            // 1. Handle Plus (+) Button
+            plusBtn.addEventListener('click', () => {
+                let currentQuantity = parseInt(quantityVal.textContent);
+                quantityVal.textContent = currentQuantity + 1;
+                updateCartTotal(); // Recalculates prices
+            });
+
+            // 2. Handle Minus (-) Button
+            minusBtn.addEventListener('click', () => {
+                let currentQuantity = parseInt(quantityVal.textContent);
+                // Prevent quantity from going below 1
+                if (currentQuantity > 1) {
+                    quantityVal.textContent = currentQuantity - 1;
+                    updateCartTotal(); // Recalculate prices
+                }
+            });
+
+            // 3. Handle Remove Button
+            removeBtn.addEventListener('click', () => {
+                // Remove the HTML element for this item
+                item.remove();
+                updateCartTotal(); // Recalculate prices without this item
+            });
+        });
+    }
