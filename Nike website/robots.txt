@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Do not index the shopping cart or payment pages
+Disallow: /cart.html
+Disallow: /payment.html
+Disallow: /membership%20portal.html
+Disallow: /sign-up.html
+
+# Point to the sitemap (Update this URL after you deploy to Netlify)
+Sitemap: /sitemap.xml
