@@ -354,4 +354,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateCartTotal(); // Recalculate prices without this item
             });
         });
+
+        // 4. Save Total for Payment Page
+        const checkoutBtn = document.querySelector('.checkout-btn');
+        
+        if (checkoutBtn) {
+            checkoutBtn.addEventListener('click', () => {
+                // Get the current calculated total
+                const finalTotal = document.querySelector('.total-price').textContent;
+                // Save it to the browser's "Local Storage"
+                localStorage.setItem('nikeCartTotal', finalTotal);
+            });
+        }
     }
+
+/* ---------------------------------------------------------------------- */
+                        /* 10. Payment Page Logic */
+/* ---------------------------------------------------------------------- */
+    if (document.querySelector('.payment-container')) {
+        
+        // Retrieves the total we saved in the cart
+        const savedTotal = localStorage.getItem('nikeCartTotal');
+        const totalDisplay = document.querySelector('.total-amount');
+
+        if (savedTotal && totalDisplay) {
+            totalDisplay.textContent = savedTotal;
+        }
+    }    
